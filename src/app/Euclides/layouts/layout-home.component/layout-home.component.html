@@ -1,0 +1,24 @@
+<!-- NAVBAR -->
+<div class="fixed top-0 left-0 right-0 z-[200] px-8 pt-3 pb-2">
+  <nav class="max-w-6xl mx-auto h-14 flex items-center justify-between px-6 py-2 bg-brand-surface/80 backdrop-blur-xl border border-border-main rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+
+    <a [routerLink]="'/about'" routerLinkActive="text-accent border-b-2 border-accent" [routerLinkActiveOptions]="{ exact: true }"
+      class="relative text-text-secondary flex items-center font-medium h-full px-4 transition-colors duration-300 hover:text-text-primary">
+      <i class="ph ph-user-circle text-lg mr-2"></i>
+      <span>{{ 'Euclides' | uppercase }}</span>
+    </a>
+
+    @for (route of routes(); track route.path) {
+      <a [routerLink]="route.path" routerLinkActive="text-text-secondary border-b-2 border-accent" [routerLinkActiveOptions]="{ exact: true }"
+        class="px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] text-text-muted transition-all relative hover:text-text-primary ">
+        <span>{{ route.label | uppercase }}</span>
+      </a>
+    }
+
+  </nav>
+</div>
+
+<!-- MAIN -->
+<main class="relative z-0 min-h-screen overflow-y-auto pt-24 px-4 md:px-16 lg:px-6">
+  <router-outlet></router-outlet>
+</main>

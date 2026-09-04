@@ -1,0 +1,88 @@
+<section class="max-w-6xl mx-auto py-4">
+    <div class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+            <span class="w-12 h-1 bg-brand-main rounded-full"></span>
+            <span class="text-brand-main font-bold tracking-widest uppercase text-xl">Otra parte de lo que hago</span>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+            Últimos <span class="text-brand-main">Artículos</span>
+        </h2>
+        <p class="text-slate-600 max-w-2xl text-lg">
+            Exploro temas de ingeniería de software, las últimas tendencias tecnológicas y otros temas cómo lectura, y ciencia. Compertiré mis reflecciones y guias técnicas en mi propio block.
+        </p>
+    </div>
+
+    <!-- Grid de Artículos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        @for (article of articles(); track article.id) {
+
+            <article  class="blog-card bg-white rounded-2xl overflow-hidden flex flex-col shadow-md transition duration-500 transform hover:shadow-xl hover:-translate-y-2 hover:border-[0.1px] hover:border-brand-main">
+
+                <!-- Header -->
+                <div class="h-48 bg-slate-200 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-brand-main opacity-10 flex items-center justify-center">
+                    <svg class="w-16 h-16 text-brand-main" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4">
+                        </path>
+                    </svg>
+                    </div>
+
+                    <div class="absolute top-4 left-4">
+                    <span
+                        class="tag text-brand-main bg-brand-main/20 rounded-full py-1 px-3 text-[0.7rem] font-semibold uppercase">
+                        {{ article.category }}
+                    </span>
+                    </div>
+                </div>
+
+                <!-- Body -->
+                <div class="p-6 grow">
+                    <time class="text-xs text-slate-500 font-medium mb-2 block uppercase tracking-wider">
+                    {{ article.publishedAt }} • {{ article.readTime }} min lectura
+                    </time>
+
+                    <h3
+                    class="text-xl font-bold text-slate-900 mb-3 leading-tight hover:text-brand-main transition-colors cursor-pointer">
+                    {{ article.title }}
+                    </h3>
+
+                    <p class="text-slate-600 text-sm mb-6 line-clamp-3">
+                    {{ article.excerpt }}
+                    </p>
+                </div>
+
+                <!-- Footer -->
+                <div class="p-6 pt-0">
+                    <a
+                    [href]="article.articleUrl"
+                    target="_blank"
+                    rel="noopener"
+                    class="bg-brand-main text-white inline-flex items-center px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:bg-brand-main/80">
+
+                    Leer artículo
+
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3">
+                        </path>
+                    </svg>
+                    </a>
+                </div>
+
+            </article>
+
+        }
+
+    </div>
+
+    <!-- Footer de la sección -->
+    <div class="mt-16 text-center">
+        <a href="#" class="inline-flex items-center text-slate-900 font-bold hover:text-brand-main transition-colors group">
+            Ver todas las publicaciones
+            <span class="ml-2 transform group-hover:translateX(4px) transition-transform">→</span>
+        </a>
+    </div>
+</section>

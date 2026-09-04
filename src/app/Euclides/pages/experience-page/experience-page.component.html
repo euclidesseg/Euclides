@@ -1,0 +1,97 @@
+<section class="max-w-6xl mx-auto py-4">
+    <!-- Encabezado de la Sección -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="max-w-2xl">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="w-12 h-1 bg-brand-main rounded-full"></span>
+                <span class="text-brand-main font-bold tracking-widest uppercase text-xl">Trayectoria Profesional</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 leading-tight">
+                Experiencia <span class="text-brand-main">Laboral</span>
+            </h2>
+        </div>
+    </div>
+
+    <!-- Grid de Experiencias -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        @for (exp of experiences(); track exp.id) {
+
+        <div class="group relative bg-white rounded-3xl p-8 border border-[#e2e8f0]
+              transition-all duration-500 flex flex-col h-full overflow-hidden
+              hover:-translate-y-2 hover:shadow-2xl hover:ring-1 hover:ring-indigo-100">
+
+            <!-- Gradient Hover -->
+            <div
+                class="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-50 to-transparent opacity-0 group-hover:opacity-100 transition duration-500">
+            </div>
+
+            <!-- Decoración -->
+            <div class="absolute -right-8 -top-8 w-24 h-24 bg-[#e2e8f0] rounded-full
+                opacity-50 group-hover:opacity-10 group-hover:bg-indigo-400 transition-all duration-500">
+            </div>
+
+            <div class="relative z-10 flex flex-col h-full">
+
+                <!-- Header -->
+                <div class="flex items-center justify-between mb-8">
+                    <div class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center
+                    justify-center shadow-lg shadow-indigo-500/30
+                    group-hover:scale-110 transition">
+
+                        @switch (exp.icon) {
+                        @case ('panel') {
+                        <lucide-angular [img]="PanelLeftBottom()" class="text-white w-7 h-7" />
+                        }
+                        @case ('palette') {
+                        <lucide-angular [img]="PaletteIcon()" class="text-white w-7 h-7" />
+                        }
+                        @case ('code') {
+                        <lucide-icon [img]="CodeXmlIcon()" class="text-white w-7 h-7" />
+                        }
+                        }
+                    </div>
+
+                    <span class="text-xs font-bold text-indigo-600 bg-indigo-50
+                     px-3 py-1.5 rounded-full">
+                        {{ exp.startDate }} — {{ exp.endDate }}
+                    </span>
+                </div>
+
+                <!-- Info -->
+                <h3 class="text-xl font-semibold text-slate-900 mb-1
+                 group-hover:text-indigo-600 transition">
+                    {{ exp.role }}
+                </h3>
+
+                <p class="text-slate-500 font-medium mb-4 flex items-center gap-2">
+                    <i data-lucide="building-2" class="w-4 h-4"></i>
+                    {{ exp.company }}
+                </p>
+
+                <!-- Descripción -->
+                <ul class="text-sm text-slate-600 leading-relaxed mb-6 flex-grow list-disc pl-5 space-y-2">
+                    @for (item of exp.description; track item) {
+                    <li>{{ item }}</li>
+                    }
+                </ul>
+
+                <!-- Skills -->
+                <div class="pt-5 border-t border-[#e2e8f0] mt-auto">
+                    <div class="flex flex-wrap gap-2">
+                        @for (skill of exp.skills; track skill) {
+                        <span class="bg-[#f1f5f9] text-slate-700 text-[11px]
+                         font-semibold px-3 py-1 rounded-full
+                         group-hover:bg-indigo-50 group-hover:text-indigo-600 transition">
+                            {{ skill }}
+                        </span>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        }
+    </div>
+
+</section>

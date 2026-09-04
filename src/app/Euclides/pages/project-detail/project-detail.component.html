@@ -1,0 +1,116 @@
+<section class="max-w-7xl mx-auto">
+    <header class="mb-2 px-6">
+        @if (project()?.state) {
+        <span
+            class="bg-brand-main/70 text-white rounded-xl text-sm px-2 py-1 mb-8 inline-block">{{project()?.state}}</span>
+        }
+        <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
+            {{project()?.title}} <span class="text-brand-main">{{project()?.slug}}</span>
+        </h1>
+        <p class="text-lg text-slate-600 max-w-3xl leading-relaxed">
+            {{project()?.description}}
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-8">
+            @if (project()?.repositoryUrl) {
+            <a [href]="project()?.repositoryUrl" target="_blank"
+                class="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white rounded-xl hover:bg-slate-800 transition-all shadow-md hover:shadow-lg text-sm font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                GitHub
+            </a>
+            }
+
+            @if (project()?.demoUrl) {
+            <a [href]="project()?.demoUrl" target="_blank"
+                class="flex items-center gap-2 px-5 py-2.5 bg-brand-main text-white rounded-xl transition-all shadow-md hover:shadow-lg text-sm font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" x2="21" y1="14" y2="3" />
+                </svg>
+                Sitio Web
+            </a>
+            }
+            @if (project()?.npm) {
+            <a [href]="project()?.npm" target="_blank"
+                class="flex items-center gap-2 px-5 py-2.5 text-white rounded-xl transition-all shadow-md hover:shadow-lg text-sm font-medium bg-linear-to-r from-orange-500 to-[#d32d1c]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128">
+                    <path fill="currentColor" d="M0 7.062C0 3.225 3.225 0 7.062 0h113.88c3.838 0 7.063 3.225 7.063 7.062v113.88c0 3.838-3.225 7.063-7.063 7.063H7.062c-3.837 0-7.062-3.225-7.062-7.063zm23.69 97.518h40.395l.05-58.532h19.494l-.05 58.581h19.543l.05-78.075l-78.075-.1l-.1 78.126z"/>
+                </svg>
+               NPM
+            </a>
+            }
+        </div>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+            @for (item of project()?.technologies; track item) {
+            <span
+                class="px-4 py-2 bg-white border border-slate-200 rounded-full text-sm font-medium text-slate-700 shadow-sm flex items-center gap-2">
+                <span class="w-2 h-2 bg-blue-500 rounded-full"></span>{{item}}
+            </span>
+            }
+        </div>
+    </header>
+
+    <!-- Galería de Imágenes (Grid Layout) -->
+    <section
+        class="container-main relative w-full h-124 rounded-lg overflow-hidden flex items-center justify-center mb-16 lg:px-16 lg:h-162.5 md:mb-24">
+
+
+        <div class="relative w-full h-full max-w-4xl px-24">
+
+            @if (project(); as p) {
+
+            <div
+                class="img-1 portrait-image absolute left-[-5%] top-[15%] w-[70%] aspect-square rounded-lg overflow-hidden transform -rotate-[18deg] z-10 border-10 border-white shadow-2xl">
+                <img [src]="p.imagesDetail[0]" alt="[Imagen de análisis de datos en perspectiva]"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-linear-to-tr via-transparent to-transparent"></div>
+            </div>
+            <div class="img-2 portrait-image absolute right-[-5%] top-[10%] w-[70%] aspect-square rounded-lg overflow-hidden transform -rotate-10 z-20 border-10 border-white shadow-lg">
+                <img src="{{p.imagesDetail[1]}}" alt="[Imagen de código fuente detallado]"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-linear-to-bl from-black/30 via-transparent to-transparent"></div>
+            </div>
+            }
+        </div>
+    </section>
+
+    <!-- Información Detallada -->
+    <section class="items-start px-6">
+        <div class="w-full space-y-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-slate-900">Sobre el Proyecto</h2>
+                <div class="space-y-4 text-slate-600 text-lg leading-relaxed">
+                    <p>
+                        {{project()?.aboutDescription}}
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-slate-900">Características Clave</h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    @for (item of project()?.highlights; track item) {
+                    <li class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm">
+                        <div
+                            class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                <path fill="#2979ff" d="M12 1L3 7l5 2l-2-2Z" />
+                                <path fill="#2979ff" d="m4 15l9-6l-5-2l2 2Z" />
+                            </svg>
+                        </div>
+                        <p class="text-slate-500">{{item}}</p>
+                    </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
