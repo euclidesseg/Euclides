@@ -27,7 +27,7 @@ export interface SidebarRoute {
 export class LayoutHomeComponent {
   routes = signal<SidebarRoute[]>([
     { path: 'about', label: 'Home' },
-    { path: 'about', label: 'Habilidades' },
+    { path: 'skills', label: 'Habilidades' },
     { path: 'projects', label: 'Proyectos' },
     { path: 'certifications', label: 'Certificaciones' },
     { path: 'experience', label: 'Experiencia ' },

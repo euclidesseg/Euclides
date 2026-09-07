@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: 'euclides',
-        loadComponent: () =>import('./Euclides/layouts/layout-home.component/layout-home.component').then(m => m.LayoutHomeComponent),
+        loadComponent: () => import('./Euclides/layouts/layout-home.component/layout-home.component').then(m => m.LayoutHomeComponent),
         children: [
             {
                 path: '',
@@ -13,6 +13,10 @@ export const routes: Routes = [
             {
                 path: 'about',
                 loadComponent: () => import('./Euclides/pages/about-page/about-page.component')
+            },
+            {
+                path: 'skills',
+                loadComponent: () => import('./Euclides/pages/skills-page/skills-page.component')
             },
             {
                 path: 'projects',
