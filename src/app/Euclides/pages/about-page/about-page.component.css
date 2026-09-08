@@ -26,7 +26,7 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
 
-    color: var(--color-text-secondary);
+    color: var(--color-brand-golden-300);
 }
 
 .hero__title {
@@ -46,7 +46,7 @@
 
     font-size: 1rem;
 
-    color: var(--color-text-muted);
+    color: var(--color-brand-ivory-200);
 }
 
 .hero__actions {
@@ -64,8 +64,8 @@
 
     border-radius: .5rem;
 
-    background-color: var(--color-accent-light);
-    color: var(--color-brand-surface);
+    background-color: var(--color-brand-golden-300);
+    color: var(--color-brand-navy-400);
 
     font-size: 0.75rem;
     letter-spacing: .2rem;
@@ -81,6 +81,6 @@
 }
 
 .hero__button:hover {
-    background-color: var(--color-accent);
+    background-color: var(--color-brand-golden-400);
     transform: translateY(-2px);
 }

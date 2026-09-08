@@ -1,42 +1,60 @@
 @import "tailwindcss";
 
 @theme {
-  /* Background */
-  --color-brand-bg: #0c101b;
-  --color-brand-surface: #111827;
-  --color-brand-surface-light: #151d2b;
 
-  /* Borders */
-  --color-border-main: #212935;
-  --color-border-secondary: #c5a880;
-  --color-border-tertiary: #1f2b47;
+  /*=========================
+     GOLDEN
+     ========================= */
+  --color-brand-golden-200: #d8bd96;
+  --color-brand-golden-300: #c5a880;
+  --color-brand-golden-400: #a98c65;
+  /*=========================
+     NAVY
+     ========================= */
+  --color-brand-navy-200: #151d2b;
+  --color-brand-navy-300: #111827;
+  --color-brand-navy-400: #0c101b;
+  /* =========================
+     IVORY
+     ========================= */
+  --color-brand-ivory-200: #f2f0eb;
+  --color-brand-ivory-300: #e8e5df;
+  --color-brand-ivory-400: #d2cec5;
 
-  /* Text */
-  --color-text-primary: #e8e5df;
-  --color-text-secondary: #c5a880;
-  --color-text-muted: #7f8796;
+  /*=========================
+     SLATE
+     ========================= */
+  --color-brand-slate-200: #aab1bd;
+  --color-brand-slate-300: #7f8796;
+  --color-brand-slate-400: #5e6675;
 
-  /* Accent */
-  --color-accent: #c5a880;
-  --color-accent-light: #d8bd96;
+  /*=========================
+     STEEL
+     ========================= */
+  --color-brand-steel-200: #2d3747;
+  --color-brand-steel-300: #212935;
+  --color-brand-steel-400: #1f2b47;
 }
 
 
 html,
 body {
-    font-family: 'Inter';
-  background-color: var(--color-brand-bg);
-  color: var(--color-text-primary);
+  font-family: 'Inter';
+  background-color: var(--color-brand-navy-400);
+  color: var(--color-brand-slate-200);
 }
+
 html {
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
 }
+
 body {
   min-height: 100%;
   overflow-x: hidden;
 }
+
 html,
 body,
 app-root {
