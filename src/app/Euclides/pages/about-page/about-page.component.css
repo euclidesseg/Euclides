@@ -37,7 +37,7 @@
     line-height: 0.85;
     letter-spacing: -0.03em;
 
-    color: var(--color-text-primary);
+    color: var(--color-brand-ivory-200);
 }
 
 .hero__subtitle {
@@ -46,7 +46,7 @@
 
     font-size: 1rem;
 
-    color: var(--color-brand-ivory-200);
+    color: var(--color-brand-golden-200);
 }
 
 .hero__actions {
