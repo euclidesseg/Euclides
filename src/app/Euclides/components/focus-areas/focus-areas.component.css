@@ -1,3 +1,21 @@
 :host {
   display: block;
 }
+
+.ep-focus__area-title-content {
+  margin-bottom: 1rem;
+}
+
+.ep-focus__areas--title {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  /* font-family: "Titillium Web", sans-serif; */
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.ep-area__item {
+  min-height: 10rem;
+  border: .5px solid var(--color-brand-navy-200);
+  border-radius: 1rem;
+}

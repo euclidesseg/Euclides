@@ -5,13 +5,14 @@
   /*=========================
      GOLDEN
      ========================= */
+  --color-brand-golden-100: #e8e1d9;
   --color-brand-golden-200: #d8bd96;
   --color-brand-golden-300: #c5a880;
   --color-brand-golden-400: #a98c65;
   /*=========================
      NAVY
      ========================= */
-  --color-brand-navy-200: #151d2b;
+  --color-brand-navy-200: #252a37;
   --color-brand-navy-300: #111827;
   --color-brand-navy-400: #0c101b;
   /* =========================
@@ -36,8 +37,10 @@
   --color-brand-steel-400: #1f2b47;
 }
 
-*{
+* {
+  box-sizing: border-box;
 }
+
 html,
 body {
   box-sizing: border-box;
@@ -83,20 +86,22 @@ app-root::-webkit-scrollbar-button {
 html::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track,
 app-root::-webkit-scrollbar-track {
-  background: var(--color-brand-navy-400);
+  background: var(--color-brand-navy-200);
 }
 
 /* Thumb */
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb,
 app-root::-webkit-scrollbar-thumb {
-  background: var(--color-brand-navy-300);
+  background: var(--color-brand-golden-200);
   border-radius: 4px;
-  border: 1px solid var(--color-brand-navy-400);
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--color-brand-golden-400);
 }
 
 html::-webkit-scrollbar-thumb:hover,
 body::-webkit-scrollbar-thumb:hover,
 app-root::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-steel-400);
+  background: var(--color-brand-golden-300);
 }
