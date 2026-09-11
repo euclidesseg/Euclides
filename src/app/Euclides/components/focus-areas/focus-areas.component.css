@@ -17,16 +17,26 @@
 .ep-area__item {
   min-height: 10rem;
 }
-.ep-area__item-content{
-  
-}
-.ep-area__item-content:hover{
+
+.ep-area__item-content {}
+
+.ep-area__item-content:hover {
   box-shadow: -1px -1px 75px -55px var(--color-brand-golden-300);
 }
 
-.background__point{
-  background-image: radial-gradient(circle at 1px 1px, currentcolor 1px, transparent 0px); /* cuurrent color que use la misma propiedad de color*/
+.background__point {
+  background-image: radial-gradient(circle at 1px 1px, currentcolor 1px, transparent 0px);
+  /* cuurrent color que use la misma propiedad de color*/
   background-size: 16px 16px;
   /*background-size: 16px 16px; repite este pequeño dibujo cada 16px horizontal y verticalmente.*/
   color: var(--color-brand-golden-400);
 }
+
+/* Con lineas */
+/* background-image:
+    linear-gradient(to right, currentColor 1px, transparent 1px),
+    linear-gradient(to bottom, currentColor 1px, transparent 1px);
+
+  background-size: 16px 16px;
+
+  color: var(--color-brand-golden-400); */

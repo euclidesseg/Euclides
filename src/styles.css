@@ -63,19 +63,19 @@ body,
 app-root {
   overflow-x: hidden;
 }
-body::before  {
+
+body::before {
   content: "";
   position: fixed;
   inset: 0;
   min-height: 100%;
   width: 100%;
   background:
-       radial-gradient(
-           circle at 50% 40%,var(--color-brand-navy-300),
-          var(--color-brand-navy-400),
-          var(--color-brand-navy-300)
-       );
-     background-attachment: scroll;
+    radial-gradient(circle at 50% 40%,
+      var(--color-brand-navy-400),
+      #00031a,
+      var(--color-brand-navy-400))
+    /* background-image: url('./assets/images/background.jpg'); */
 }
 
 /* Scrollbar */
