@@ -37,9 +37,6 @@
   --color-brand-steel-400: #1f2b47;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 html,
 body {
@@ -47,7 +44,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Inter';
-  background-color: var(--color-brand-navy-400);
   color: var(--color-brand-slate-200);
 }
 
@@ -66,6 +62,20 @@ html,
 body,
 app-root {
   overflow-x: hidden;
+}
+body::before  {
+  content: "";
+  position: fixed;
+  inset: 0;
+  min-height: 100%;
+  width: 100%;
+  background:
+       radial-gradient(
+           circle at 50% 40%,var(--color-brand-navy-300),
+          var(--color-brand-navy-400),
+          var(--color-brand-navy-300)
+       );
+     background-attachment: scroll;
 }
 
 /* Scrollbar */
