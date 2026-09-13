@@ -1,30 +1,30 @@
 :host {
   display: block;
 }
+.ep-focus{
 
-.ep-focus__area-title-content {
-  margin-bottom: 1rem;
 }
 
-.ep-focus__areas--title {
+.ep-focus-areas__title-content {
+  margin-bottom: 2rem;
+}
+
+.ep-focus-areas__title {
   display: block;
-  font-family: "Space Grotesk", sans-serif;
-  /* font-family: "Titillium Web", sans-serif; */
+  font-family: var(--font-space);
   font-weight: 600;
-  font-size: 2rem;
 }
 
-.ep-area__item {
-  min-height: 10rem;
+.ep-focus-area{
+  opacity: 1;
+  transform: none;
 }
 
-.ep-area__item-content {}
-
-.ep-area__item-content:hover {
+.ep-focus-area__content:hover {
   box-shadow: -1px -1px 75px -55px var(--color-brand-golden-300);
 }
 
-.background__point {
+.ep-focus-area__background {
   background-image: radial-gradient(circle at 1px 1px, currentcolor 1px, transparent 0px);
   /* cuurrent color que use la misma propiedad de color*/
   background-size: 16px 16px;
@@ -32,11 +32,3 @@
   color: var(--color-brand-golden-400);
 }
 
-/* Con lineas */
-/* background-image:
-    linear-gradient(to right, currentColor 1px, transparent 1px),
-    linear-gradient(to bottom, currentColor 1px, transparent 1px);
-
-  background-size: 16px 16px;
-
-  color: var(--color-brand-golden-400); */

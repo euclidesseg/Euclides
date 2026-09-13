@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
+import { FooterComponent } from '../../components/footer-component/footer.component';
 
 export interface SidebarRoute {
   path: string;
@@ -20,7 +21,8 @@ export interface SidebarRoute {
     RouterLinkActive,
     LucideAngularModule,
     UpperCasePipe,
-  ],
+    FooterComponent
+],
   templateUrl: './layout-home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

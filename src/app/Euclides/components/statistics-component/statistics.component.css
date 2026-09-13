@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+:host {
+  display: block;
+}
+.ep-statistics{
+
+}
+
+.ep-statistics__title-content {
+  margin-bottom: 2rem;
+}
+
+.ep-statistics__title {
+  display: block;
+  font-family: var(--font-space);
+  font-weight: 600;
+}
+
+.ep-statistics__statistic{
+  position: relative;
+  padding: 4rem .5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: .5rem;
+  z-index: 9;
+}

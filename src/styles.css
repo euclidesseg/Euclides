@@ -2,9 +2,18 @@
 
 @theme {
 
-  /*=========================
-     GOLDEN
-     ========================= */
+
+  /*====Fonts==================*/
+  --font-inter: "Inter", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-titillium: "Titillium Web", sans-serif;
+  --font-code: "Google Sans Code", monospace;
+  /*====Fonts==================*/
+
+
+
+  /*====Colors=================*/
+  /*===========GOLDEN==============*/
   --color-brand-golden-100: #e8e1d9;
   --color-brand-golden-200: #d8bd96;
   --color-brand-golden-300: #c5a880;
@@ -14,7 +23,7 @@
      ========================= */
   --color-brand-navy-200: #252a37;
   --color-brand-navy-300: #111827;
-  --color-brand-navy-400: #0c101b;
+  --color-brand-navy-400: #00030c;
   /* =========================
      IVORY
      ========================= */
@@ -43,7 +52,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter';
+  font-family: var(--font-inter);
   color: var(--color-brand-slate-200);
 }
 
@@ -71,10 +80,11 @@ body::before {
   min-height: 100%;
   width: 100%;
   background:
+    linear-gradient(135deg, transparent 64.5%, var(--color-brand-navy-400) 64.6%, var(--color-brand-navy-200) 65.5%, var(--color-brand-navy-400) 67.5%, var(--color-brand-navy-400) 69%, transparent 69.1%),
     radial-gradient(circle at 50% 40%,
-      var(--color-brand-navy-400),
-      #00031a,
-      var(--color-brand-navy-400))
+       var(--color-brand-steel-400, #1f2b47) 0%,
+      #00031a 45%,
+      var(--color-brand-navy-400,#0c101b))100%
     /* background-image: url('./assets/images/background.jpg'); */
 }
 

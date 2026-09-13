@@ -1,7 +1,7 @@
 <!-- NAVBAR -->
-<div class="fixed w-full top-0 left-0 right-0 z-200 px-8 pt-3 pb-2">
+<header class="ep-header fixed w-full top-0 left-0 right-0 z-200 px-8 pt-3 pb-2">
   <nav
-    class="max-w-6xl mx-auto h-14 flex items-center justify-between px-8 py-2 bg-brand-navy-300/70 backdrop-blur-xl border border-brand-golden-200/10 rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+    class="ep-nav w-full max-w-6xl mx-auto h-14 flex items-center justify-between py-2 bg-brand-navy-300/70 backdrop-blur-xl border border-brand-golden-200/10 rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
 
     <a [routerLink]="'/about'" routerLinkActive="border-b-2" [routerLinkActiveOptions]="{ exact: true }"
       class="relative text-brand-golden-300 flex gap-2 items-center font-medium h-full px-4 transition-colors duration-300 hover:text-brand-golden-400">
@@ -17,15 +17,16 @@
     @for (route of routes(); track route.path) {
     <a [routerLink]="route.path" routerLinkActive="border-b-2 border-brand-golden-300 text-brand-golden-300"
       [routerLinkActiveOptions]="{ exact: true }"
-      class="px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] transition-all relative hover:text-brand-golden-200 ">
+      class="ep-nav__item  px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.12em] transition-all relative hover:text-brand-golden-200 ">
       <span>{{ route.label | uppercase }}</span>
     </a>
     }
 
   </nav>
-</div>
+</header>
 
 <!-- MAIN -->
-<main class="w-full h-auto overflow-hidden relative">
+<main class="ep-main w-full overflow-hidden relative">
   <router-outlet />
 </main>
+<app-footer-component/>
