@@ -54,15 +54,13 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    gap: 0.75rem;
+    gap: 1rem;
 
     margin-top: 2rem;
 }
 
 .ep-hero__button {
-    padding: 0.8rem 2rem;
-
-    border-radius: 0.5rem;
+    padding: 0.7rem 2rem;
 
     background-color: var(--color-brand-golden-300);
     color: var(--color-brand-navy-400);
@@ -78,13 +76,15 @@
     transition:
         background-color 0.2s ease,
         transform 0.2s ease;
+    clip-path: polygon(0% 26%, 0% 100%, 93% 99%, 100% 70%, 100% 0%, 7% 0%);
+
 }
 
 .ep-hero__button:hover {
     background-color: var(--color-brand-golden-400);
-    transform: translateY(-2px);
 }
-.ep-colaborate-card{
+
+.ep-colaborate-card {
     position: relative;
     display: flex;
     align-items: center;
@@ -95,7 +95,8 @@
     background: var(--color-brand-navy-300);
     border-radius: 10px;
 }
-.ep-colaborate__element{
+
+.ep-colaborate__element {
     width: 100%;
     height: 100%;
     display: flex;
@@ -109,34 +110,41 @@
     z-index: 9;
     border-radius: 10px;
 }
-.ep-colaborate-card::after, .ep-colaborate-card::before{
+
+.ep-colaborate-card::after,
+.ep-colaborate-card::before {
     content: "";
     position: absolute;
     inset: -1px;
     z-index: 1;
     border-radius: 10px;
-    
-    background: conic-gradient(from var(--angle), 
-    var(--color-brand-golden-400), 
-    var(--color-brand-navy-400), 
-    var(--color-brand-golden-300),
-    var(--color-brand-navy-300), 
-    var(--color-brand-golden-400) 
-    );
-    
+
+    background: conic-gradient(from var(--angle),
+            var(--color-brand-golden-400),
+            var(--color-brand-navy-400),
+            var(--color-brand-golden-300),
+            var(--color-brand-navy-300),
+            var(--color-brand-golden-400));
+
     animation: glowind-border 3.5s linear infinite;
 }
 
+.ep-colaborate__buton-contact {
+    clip-path: polygon(0% 26%, 0% 100%, 93% 99%, 100% 70%, 100% 0%, 7% 0%);
+}
 
-@property --angle{
+@property --angle {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
 }
-@keyframes  glowind-border {
-    from{
+
+@keyframes glowind-border {
+    from {
         --angle: 0deg;
-    }to{
+    }
+
+    to {
         --angle: 360deg;
     }
 }

@@ -1,57 +1,59 @@
 <div class="px-6 md:px-16 lg:px-24">
     <section class="ep-hero w-full max-w-6xl mx-auto min-h-screen">
         <div class="ep-hero__content mb-8">
-    
+
             <p class="ep-hero__eyebrow">
                 Portafolio
             </p>
-    
+
             <h1 class="ep-hero__title font-space">
                 Euclides
                 <br>
                 Pérez
             </h1>
-    
+
             <p class="ep-hero__subtitle font-inter">
-                Ingeniero de Software, SR Java/Angular Developer
+                Ingeniero de Software, Developer SR Java/Angular
             </p>
-    
+
             <div class="ep-hero__actions">
                 <a class="ep-hero__button">
                     {{ 'Projects' | uppercase }}
                 </a>
-    
+
                 <a class="ep-hero__button">
                     {{ 'Experience' | uppercase }}
                 </a>
-    
+
                 <a class="ep-hero__button">
                     {{ 'Skills' | uppercase }}
                 </a>
             </div>
-    
+
         </div>
     </section>
     <app-focus-areas />
-    <app-statistics-component/>
-    
+    <app-statistics-component />
+
     <section class="ep-colaborate w-full max-w-4xl mx-auto mb-8 py-24">
         <section class="ep-colaborate-card ">
             <div class="ep-colaborate__element px-2 lg:px-16">
 
-               <span class="font-space text-xs tracking-[0.2em] text-brand-golden-300">{{"Disponible para colaborar" | uppercase}}</span>
-               <p class="py-4 font-code">Siempre estoy abierto a nuevas oportunidades y colaboraciones creativas.</p>
-               <a class="py-2 px-8  
+                <span class="font-space text-xs tracking-[0.2em] text-brand-golden-300">{{"Disponible para colaborar" |
+                    uppercase}}</span>
+                <p class="py-4 font-code">Siempre estoy abierto a nuevas oportunidades y colaboraciones creativas.</p>
+                <a class="ep-colaborate__buton-contact py-2 px-8  
                bg-brand-golden-300 
                hover:bg-brand-golden-400 
                tracking-widest
-               text-brand-navy-400 rounded-md flex items-center gap-1 font-titillium uppercase text-sm font-semibold transition-colors duration-500" 
-               routerLink="/euclides/contact">Contacto
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" d="M3 12.013L20.789 12m-6.776 7L21 12l-6.988-7" />
-                </svg>
-               </a>
+               text-brand-navy-400 flex items-center gap-1 font-titillium uppercase text-sm font-semibold transition-colors duration-500"
+                    routerLink="/euclides/contact">Contacto
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                            stroke-linejoin="round" d="M3 12.013L20.789 12m-6.776 7L21 12l-6.988-7" />
+                    </svg>
+                </a>
             </div>
         </section>
     </section>
