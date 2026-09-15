@@ -76,7 +76,7 @@
     transition:
         background-color 0.2s ease,
         transform 0.2s ease;
-    clip-path: polygon(0% 26%, 0% 100%, 93% 99%, 100% 70%, 100% 0%, 7% 0%);
+    clip-path: var(--clip-path-buttons)
 
 }
 
@@ -130,7 +130,8 @@
 }
 
 .ep-colaborate__buton-contact {
-    clip-path: polygon(0% 26%, 0% 100%, 93% 99%, 100% 70%, 100% 0%, 7% 0%);
+    padding: 0.7rem 2rem;
+    clip-path: var(--clip-path-buttons);
 }
 
 @property --angle {

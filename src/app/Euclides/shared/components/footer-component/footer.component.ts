@@ -1,9 +1,10 @@
 import { UpperCasePipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
+import { ParticleCanvasComponent } from '../../../components/particle-canva-component/particle-canvas.component';
 
 @Component({
   selector: 'app-footer-component',
-  imports: [UpperCasePipe],
+  imports: [UpperCasePipe, ParticleCanvasComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
 })

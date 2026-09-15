@@ -44,6 +44,10 @@
   --color-brand-steel-200: #2d3747;
   --color-brand-steel-300: #212935;
   --color-brand-steel-400: #1f2b47;
+
+  /*==========CLIP PATH ==========*/
+  --clip-path-buttons: polygon(0% 26%, 0% 100%, 93% 99%, 100% 70%, 100% 0%, 7% 0%);
+  /*==========CLIP PATH ==========*/
 }
 
 
