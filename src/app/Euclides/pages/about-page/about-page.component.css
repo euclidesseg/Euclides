@@ -90,10 +90,15 @@
     align-items: center;
     justify-content: center;
     height: auto;
-    min-height: 260px;
+    min-height: 383px;
     width: 100%;
     background: var(--color-brand-navy-300);
     border-radius: 10px;
+}
+@media screen and (width > 624px) {
+    .ep-colaborate-card{
+        min-height: 260px;
+    }
 }
 
 .ep-colaborate__element {

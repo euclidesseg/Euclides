@@ -1,5 +1,5 @@
 <footer
-    class="ep-footer relative min-h-screen w-full text-brand-golden-100/2 bg-brand-navy-400 min-h-120 border-t border-brand-golden-200/30 flex flex-col font-space">
+    class="ep-footer relative min-h-screen w-full text-brand-golden-100/3 bg-brand-navy-400 border-t border-brand-golden-200/30 flex flex-col font-space">
     <div class="relative x-10 w-full max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
         <div class="ep-fotter_particle border-b border-brand-navy-200  w-full h-56 md:h-72 overflow-hidden py-6">
             <app-particle-canvas-component />
@@ -7,8 +7,8 @@
     </div>
 
     <section class="w-full max-w-7xl mx-auto pt-24  pb-8 px-6 md:px-16 lg:px-24">
-        <div class="grid grid-cols-1 lg:grid-cols-3 border-y border-y-brand-navy-200 w-full">
-            <div class="py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 border-y border-y-brand-navy-200 w-full">
+            <div class="ep-footer__description py-16 col-span-4">
                 <section class="pr-4">
                     <div class="flex items-center gap-4 pb-8">
                         <span
@@ -40,25 +40,27 @@
                     </div>
                 </section>
             </div>
-            <div class="py-16 px-4 border-y lg:border-y-0 lg:border-x border-brand-navy-200">
+            <div class="ep-footer__map col-span-3 py-16 lg:px-8 border-y lg:border-y-0 lg:border-x border-brand-navy-200">
                 <h4
-                    class="flex w-full text-center justify-center items-center gap-2 text-brand-golden-400 uppercase text-[9px] tracking-[0.1rem] mx-auto mb-8">
+                    class="flex w-full text-center justify-start items-center gap-2 text-brand-golden-400 uppercase text-[12px] tracking-[0.1rem] mx-auto mb-8">
                     <span class="w-1.5 h-1.5 bg-brand-golden-200 block"></span>
                     <span>
                         Mapa del sitio
                     </span>
                 </h4>
                 <ul class="space-y-4 font-mono text-xs">
+                    @for (route of routes(); track route.path; let index= $index) {
                     <li>
                         <a class="group flex items-center justify-between text-brand-golden-100/40 hover:text-brand-golden-300 transition-colors py-1"
-                            href="" routerLink="/euclides/about">
+                            href="" [routerLink]="['/euclides/', route.path]">
                             <span class="flex items-center gap-3">
-                                <span class="text-brand-300/30 group-hover:text-brand-300/70 transition-colors">
+                                <span
+                                    class="text-brand-golden-300/30 group-hover:text-brand-golden-300/70 transition-colors">
                                     <span dir="auto">
                                         <span dir="auto">0 </span>
                                     </span>
                                     <span dir="auto">
-                                        <span dir="auto">1 </span>
+                                        <span dir="auto">{{index + 1}} </span>
                                     </span>
                                     <span dir="auto">
                                         <span dir="auto">.</span>
@@ -66,41 +68,87 @@
                                 </span>
                                 <span class="tracking-widest uppercase">
                                     <span dir="auto">
-                                        <span dir="auto">Sobre mí</span>
+                                        <span dir="auto">{{route.label}}</span>
                                     </span>
                                 </span>
                             </span>
                             <span
-                                class="w-1.5 h-1.5 bg-brand-navy-300 group-hover:bg-brand-golden-400 transition-colors"></span>
+                                class="w-1.5 h-1.5 bg-brand-navy-300 group-hover:bg-brand-golden-300/70 transition-colors"></span>
                         </a>
-                        <a class="group flex items-center justify-between text-brand-golden-100/40 hover:text-brand-golden-300 transition-colors py-1"
-                            routerLink="/euclides/skills">
-                            <span class="flex items-center gap-3">
-                                <span class="text-brand-300/30 group-hover:text-brand-300/70 transition-colors">
-                                    <span dir="auto">
-                                        <span dir="auto">0 </span>
-                                    </span>
-                                    <span dir="auto">
-                                        <span dir="auto">2 </span>
-                                    </span>
-                                    <span dir="auto">
-                                        <span dir="auto">.</span>
-                                    </span>
-                                </span>
-                                <span class="tracking-widest uppercase">
-                                    <span dir="auto">
-                                        <span dir="auto">Habilidades</span>
-                                    </span>
-                                </span>
-                            </span>
-                            <span
-                                class="w-1.5 h-1.5 bg-brand-navy-300 group-hover:bg-brand-golden-400 transition-colors"></span>
-                        </a>
-                    </li>
 
+                    </li>
+                    }
                 </ul>
             </div>
-            <div class="py-16 px-4"></div>
+            <div class="ep-footer__contacts col-span-5 py-16 lg:pl-8">
+                <div class="w-full">
+                    <h4
+                        class="flex w-full text-center justify-start items-center gap-2 text-brand-golden-400 uppercase text-[12px] tracking-[0.1rem] mx-auto mb-8">
+                        <span class="w-1.5 h-1.5 bg-brand-golden-300 block"></span>
+                        <span>
+                            Contacto
+                        </span>
+                    </h4>
+                    <div
+                        class="ep-footer__network w-full pb-8 flex items-center justify-between flex-col md:flex-row gap-4 uppercase text-brand-golden-100">
+                        <a href="https://www.linkedin.com/in/e-perez-in/"
+                            class="w-full px-3 py-2 border border-brand-slate-400 text-center text-[12px] font-code flex items-center justify-center gap-4">
+                            <span class="block">
+                                linked_in
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand-golden-300"
+                                viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor"
+                                    d="M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.5 2.5 0 0 0 2.5-2.5V5.56a2.5 2.5 0 0 0-2.5-2.5m1.5 15.38a1.51 1.51 0 0 1-1.5 1.5H5.56a1.51 1.51 0 0 1-1.5-1.5V5.56a1.51 1.51 0 0 1 1.5-1.5h12.88a1.51 1.51 0 0 1 1.5 1.5Z" />
+                                <path fill="currentColor" d="M6.376 10.748a1 1 0 1 1 2 0v6.5a1 1 0 0 1-2 0Z" />
+                                <circle cx="7.376" cy="6.744" r="1" fill="currentColor" />
+                                <path fill="currentColor"
+                                    d="M17.62 13.37v3.88a1 1 0 1 1-2 0v-3.88a1.615 1.615 0 1 0-3.23 0v3.88a1 1 0 0 1-2 0v-6.5a1.016 1.016 0 0 1 1-1a.94.94 0 0 1 .84.47a3.61 3.61 0 0 1 5.39 3.15" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/euclidesseg"
+                            class="w-full px-3 py-2 border border-brand-slate-400 text-center text-[12px] font-code flex items-center justify-center gap-4">
+                            <span class="block">
+                                Github_Hub
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand-golden-300"
+                                viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.5">
+                                    <path d="M10 20.568c-3.429 1.157-6.286 0-8-3.568" />
+                                    <path
+                                        d="M10 22v-3.242c0-.598.184-1.118.48-1.588c.204-.322.064-.78-.303-.88C7.134 15.452 5 14.107 5 9.645c0-1.16.38-2.25 1.048-3.2c.166-.236.25-.354.27-.46c.02-.108-.015-.247-.085-.527c-.283-1.136-.264-2.343.16-3.43c0 0 .877-.287 2.874.96c.456.285.684.428.885.46s.469-.035 1.005-.169A9.5 9.5 0 0 1 13.5 3a9.6 9.6 0 0 1 2.343.28c.536.134.805.2 1.006.169c.2-.032.428-.175.884-.46c1.997-1.247 2.874-.96 2.874-.96c.424 1.087.443 2.294.16 3.43c-.07.28-.104.42-.084.526s.103.225.269.461c.668.95 1.048 2.04 1.048 3.2c0 4.462-2.134 5.807-5.177 6.643c-.367.101-.507.559-.303.88c.296.47.48.99.48 1.589V22" />
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="border-b border-brand-navy-200 pt-4 pb-4">
+                        <span class="block text-[10px] uppercase tracking-widest text-brand-golden-300 mb-2">
+                            Intereses
+                        </span>
+
+                        <p class="text-sm text-brand-golden-100/70 leading-relaxed">
+                            Software, astronomía, ciencia y matemáticas.
+                        </p>
+                    </div>
+                    <div class="border-b border-brand-navy-200 pt-4 pb-4">
+                        <span class="block text-[10px] uppercase tracking-widest text-brand-golden-300 mb-2">
+                            Curiosidad
+                        </span>
+
+                        <p class="text-sm text-brand-golden-100/70 leading-relaxed">
+                            Una mente curiosa, siempre aprendiendo y
+                            construyendo.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+        <span class="py-2 mt-2 block pr-4 text-brand-golden-300/30 text-[10px] uppercase tracking-widest font-code">{{"©"}}{{year()}} | Hecho con cariño por Euclides Pérez</span>
     </section>
 </footer>
