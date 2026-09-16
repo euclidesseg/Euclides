@@ -6,8 +6,9 @@
   /*====Fonts==================*/
   --font-inter: "Inter", sans-serif;
   --font-space: "Space Grotesk", sans-serif;
-  --font-titillium: "Titillium Web", sans-serif;
   --font-code: "Google Sans Code", monospace;
+  --font-lobster: "Lobster", sans-serif;
+  ;
   /*====Fonts==================*/
 
 
@@ -18,7 +19,7 @@
   --color-brand-golden-200: #d8bd96;
   --color-brand-golden-300: #c5a880;
   --color-brand-golden-400: #a98c65;
-    /* --color-brand-navy-400: #00030c; */
+  /* --color-brand-navy-400: #00030c; */
 
   /*=========================
      NAVY
@@ -88,9 +89,9 @@ body::before {
   background:
     linear-gradient(135deg, transparent 64.5%, var(--color-brand-navy-400) 64.6%, var(--color-brand-navy-200) 65.5%, var(--color-brand-navy-400) 67.5%, var(--color-brand-navy-400) 69%, transparent 69.1%),
     radial-gradient(circle at 50% 40%,
-       var(--color-brand-steel-400, #1f2b47) 0%,
+      var(--color-brand-steel-400, #1f2b47) 0%,
       #00031a 45%,
-      var(--color-brand-navy-400,#0c101b))100%
+      var(--color-brand-navy-400, #0c101b))100%
     /* background-image: url('./assets/images/background.jpg'); */
 }
 
