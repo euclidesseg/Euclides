@@ -14,7 +14,7 @@
             </span>
         </div>
         <div class="flex justify-between flex-wrap">
-            <h3 class="flex items-start gap-1 lg:gap-2 flex-col text-2xl md:text-5xl">
+            <h3 class="flex items-start justify-center gap-1 lg:gap-2 flex-col text-2xl md:text-5xl">
                 <span class="text-brand-ivory-400 font-inter justify-between font-normal uppercase tracking-widest">
                     Colaboremos
                 </span>
@@ -22,11 +22,11 @@
             </h3>
             <div class="flex items-center justify-start py-8 w-full max-w-64">
                 <a [routerLink]="['/euclides/','contact']" class="ep-footer__colaborate__btn group">
-                    <div class="flex gap-2 relative z-9 h-full w-full">
+                    <div class="flex gap-2 items-center relative z-9 h-full w-full">
                         <span>
                             Contactame
                         </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 relative z-99" viewBox="0 0 24 24">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 relative z-99" viewBox="0 0 24 24">
                             <path d="M0 0h24v24H0z" fill="none" />
                             <g fill="none" stroke="currentColor" stroke-width="1.5">
                                 <path
@@ -64,11 +64,11 @@
                             aplicaciones backend.
                         </p>
                     </div>
-                    <div class="border border-brand-navy-200/50 px-4 uppercase">
+                    <div class="border border-brand-navy-200 px-4 uppercase">
                         <span
-                            class="block pt-4 pb-1 border-b border-brand-navy-200/40 text-brand-golden-200/80 text-[11px] tracking-widest">Tenologías
+                            class="block pt-4 pb-2 border-b border-brand-navy-200 text-brand-golden-200/80 text-[11px] tracking-widest">Tenologías
                             utilizadas aquí</span>
-                        <span class="block pt-1 pb-4 text-brand-golden-100/50 text-[10px] tracking-widest">Angular,
+                        <span class="block pt-2 pb-4 text-brand-golden-100/50 text-[10px] tracking-widest">Angular,
                             TypeScript, Tailwindm, CSS, SPA, Signals, Effects, Zone.js
                             <br>
                             <br>
@@ -89,11 +89,11 @@
                 <ul class="space-y-4 font-mono text-xs">
                     @for (route of routes(); track route.path; let index= $index) {
                     <li>
-                        <a class="group flex items-center justify-between text-brand-golden-100/40 hover:text-brand-golden-300 transition-colors py-1"
+                        <a class="group flex items-center justify-between text-brand-golden-100/80 hover:text-brand-golden-300 transition-colors py-1"
                             href="" [routerLink]="['/euclides/', route.path]">
                             <span class="flex items-center gap-3">
                                 <span
-                                    class="text-brand-golden-300/30 group-hover:text-brand-golden-300/70 transition-colors">
+                                    class="text-brand-golden-300/40 group-hover:text-brand-golden-300/70 transition-colors">
                                     <span dir="auto">
                                         <span dir="auto">0 </span>
                                     </span>
@@ -188,7 +188,7 @@
             </div>
         </div>
         <span
-            class="py-2 mt-2 block pr-4 text-brand-golden-300/30 text-[10px] uppercase tracking-widest font-code">{{"©"}}{{year()}}
+            class="py-2 mt-2 block pr-4 text-brand-golden-300/80 text-[10px] uppercase tracking-widest font-code">{{"©"}}{{year()}}
             | Hecho con cariño por Euclides Pérez</span>
     </section>
 </footer>
