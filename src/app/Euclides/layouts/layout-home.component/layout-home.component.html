@@ -1,5 +1,5 @@
 <!-- NAVBAR -->
-<header class="ep-header fixed w-full top-0 left-0 right-0 z-200 px-8 pt-3 pb-2">
+<header class="ep-header fixed w-full top-0 left-0 right-0 z-101 px-8 pt-3 pb-2">
   <nav
     class="ep-nav w-full max-w-6xl mx-auto h-14 flex items-center justify-between py-2 bg-brand-navy-300/70 backdrop-blur-xl border border-brand-golden-200/10 rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
 
@@ -24,9 +24,18 @@
 
   </nav>
 </header>
+<aside class="md:hidden w-full sm:w-[340px] fixed right-0 z-102 h-full bg-brand-navy-400 px-4">
+  <div class="relative bg-surface/90 rounded-sm flex flex-col h-full justify-between">
+
+  </div>
+</aside>
+
+<div
+  class="fixed inset-0 z-100 bg-black/40 backdrop-blur-[2px] lg:hidden transition-opacity duration-300 opacity-100 pointer-events-auto"
+  aria-hidden="true"></div>
 
 <!-- MAIN -->
 <main class="ep-main w-full overflow-hidden relative">
   <router-outlet />
 </main>
-<app-footer-component/>
+<app-footer-component />
