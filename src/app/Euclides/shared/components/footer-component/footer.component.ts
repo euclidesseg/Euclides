@@ -2,7 +2,7 @@ import { UpperCasePipe } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { ParticleCanvasComponent } from '../../../components/particle-canva-component/particle-canvas.component';
 import { RouterLink } from '@angular/router';
-import { SidebarRoute } from '../../../layouts/layout-home.component/layout-home.component';
+import { RouteInterface } from '../../interfaces/routes.interface';
 
 @Component({
   selector: 'app-footer-component',
@@ -10,10 +10,10 @@ import { SidebarRoute } from '../../../layouts/layout-home.component/layout-home
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
 })
-export class FooterComponent { 
+export class FooterComponent {
 
   public year = signal<number>(new Date().getFullYear());
-   routes = signal<SidebarRoute[]>([
+  routes = signal<RouteInterface[]>([
     { path: 'about', label: 'Sobre mi' },
     { path: 'skills', label: 'Habilidades' },
     { path: 'projects', label: 'Proyectos' },

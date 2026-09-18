@@ -8,11 +8,8 @@ import {
 import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { FooterComponent } from '../../shared/components/footer-component/footer.component';
-
-export interface SidebarRoute {
-  path: string;
-  label: string;
-}
+import { SidebarComponent } from '../../shared/components/sidebar-component/sidebar.component';
+import { RouteInterface } from '../../shared/interfaces/routes.interface';
 
 @Component({
   imports: [
@@ -21,13 +18,13 @@ export interface SidebarRoute {
     RouterLinkActive,
     LucideAngularModule,
     UpperCasePipe,
-    FooterComponent
-],
+    FooterComponent,
+    SidebarComponent
+  ],
   templateUrl: './layout-home.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayoutHomeComponent {
-  routes = signal<SidebarRoute[]>([
+  routes = signal<RouteInterface[]>([
     { path: 'about', label: 'Sobre mi' },
     { path: 'skills', label: 'Habilidades' },
     { path: 'projects', label: 'Proyectos' },
@@ -39,7 +36,7 @@ export class LayoutHomeComponent {
 
   sidebarOpen = signal(false);
 
-  readonly LG_BREAKPOINT = 1024; // Tailwind lg
+  readonly brackPointlb = 1024; // Tailwind lg
 
   readonly year = new Date().getFullYear();
 
@@ -54,13 +51,14 @@ export class LayoutHomeComponent {
 
   toggleSidebar() {
     // Solo permite toggle en mobile
-    if (window.innerWidth < this.LG_BREAKPOINT) {
+    if (window.innerWidth < this.brackPointlb) {
       this.sidebarOpen.update((v) => !v);
     }
   }
 
+  // Sincronizar sidebar con el tamaño de la pantalla
   private syncSidebarWithScreen = () => {
-    if (window.innerWidth >= this.LG_BREAKPOINT) {
+    if (window.innerWidth >= this.brackPointlb) {
       this.sidebarOpen.set(true);
     } else {
       this.sidebarOpen.set(false);
