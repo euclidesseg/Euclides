@@ -1,3 +1,83 @@
 :host {
   display: block;
 }
+.marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-row {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  /* Máscara de degradado opcional para suavizar los bordes laterales */
+  mask-image: linear-gradient(to right, transparent, var(--color-brand-navy-400) 10%, var(--color-brand-navy-300) 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, var(--color-brand-navy-400) 10%, var(--color-brand-navy-400) 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+/* Animación Fila Superior: Hacia la izquierda */
+.marquee-left .marquee-track {
+  animation: scrollLeft 25s linear infinite;
+}
+
+/* Animación Fila Inferior: Hacia la derecha */
+.marquee-right .marquee-track {
+  animation: scrollRight 25s linear infinite;
+}
+
+/* Pausar el movimiento al pasar el cursor sobre las tarjetas */
+.marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Definición de Keyframes */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Diseño de las tarjetas */
+.card {
+  width: 280px;
+  background-color: color-mix(in srgb, var(--color-brand-navy-400) 20%, var(--color-brand-navy-300) 20%);
+  border-radius: 12px;
+  padding: 16px;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin: 0;
+}

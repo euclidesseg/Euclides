@@ -1,8 +1,9 @@
 import { UpperCasePipe } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { ParticleCanvasComponent } from '../../../components/particle-canva-component/particle-canvas.component';
 import { RouterLink } from '@angular/router';
 import { RouteInterface } from '../../interfaces/routes.interface';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-footer-component',
@@ -11,15 +12,8 @@ import { RouteInterface } from '../../interfaces/routes.interface';
   styleUrl: './footer.component.css',
 })
 export class FooterComponent {
+  navigationService = inject(NavigationService);
 
   public year = signal<number>(new Date().getFullYear());
-  routes = signal<RouteInterface[]>([
-    { path: 'about', label: 'Sobre mi' },
-    { path: 'skills', label: 'Habilidades' },
-    { path: 'projects', label: 'Proyectos' },
-    { path: 'certifications', label: 'Certificaciones' },
-    { path: 'experience', label: 'Experiencia ' },
-    { path: 'articles', label: 'Articulos' },
-    { path: 'contact', label: 'Contacto' },
-  ]);
+  routes = this.navigationService.routes
 }

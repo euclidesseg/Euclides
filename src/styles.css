@@ -132,3 +132,12 @@ body::-webkit-scrollbar-thumb:hover,
 app-root::-webkit-scrollbar-thumb:hover {
   background: var(--color-brand-golden-300);
 }
+body.sidebar-open{
+  overflow: hidden;
+  height: 100%;
+}
+
+body.sidebar-open::-webkit-scrollbar
+{
+  display: none;
+}

@@ -1,0 +1,37 @@
+<section class="w-full px-6 md:px-16 lg:px-24">
+    <div class="max-w-6xl mx-auto flex items-center justify-center min-h-screen">
+        <div class="marquee-wrapper">
+          <!-- Fila Superior (Hacia la izquierda) -->
+          <div class="marquee-row marquee-left">
+            <div class="marquee-track">
+              <!-- Primer grupo de tarjetas -->
+              <div class="card" *ngFor="let item of row1">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+              <!-- Duplicado del grupo para el bucle continuo -->
+              <div class="card" *ngFor="let item of row1">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Fila Inferior (Hacia la derecha) -->
+          <div class="marquee-row marquee-right">
+            <div class="marquee-track">
+              <!-- Primer grupo de tarjetas -->
+              <div class="card" *ngFor="let item of row2">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+              <!-- Duplicado del grupo para el bucle continuo -->
+              <div class="card" *ngFor="let item of row2">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
