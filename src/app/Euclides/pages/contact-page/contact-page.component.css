@@ -1,0 +1,4 @@
+.ep-contacts__btn-folow-github,
+.ep-contact__btn-contact-linkedin {
+    clip-path: var(--clip-path-buttons);
+}
