@@ -2,3 +2,94 @@
 .ep-contact__btn-contact-linkedin {
     clip-path: var(--clip-path-buttons);
 }
+
+.wrapper {
+    margin-top: 2rem;
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -200px;
+    }
+}
+
+@keyframes scrollRight {
+    to {
+        right: -200px;
+    }
+}
+
+.itemLeft,
+.itemRight {
+    width: 200px;
+    height: 100px;
+    background-color: var(--color-brand-navy-300);
+    border-radius: 6px;
+    position: absolute;
+    animation-timing-function: linear;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+.itemLeft {
+    left: max(calc(200px * 5), 100%);
+    animation-name: scrollLeft;
+}
+
+.itemRight {
+    right: max(calc(200px * 5), calc(100% + 200px));
+    animation-name: scrollRight;
+}
+
+.item1 {
+    animation-delay: calc(40s / 5 * (5 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(40s / 5 * (5 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(40s / 5 * (5 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(40s / 5 * (5 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(40s / 5 * (5 - 5) * -1);
+}
+.ep-contacts__letcode {
+    overflow: hidden;
+}
+
+.ep-contacts__letcode::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-image: url("/assets/images/matriz.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.15;
+}
+
+.ep-contacts__letcode > * {
+    position: relative;
+    z-index: 1;
+}

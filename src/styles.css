@@ -87,7 +87,6 @@ body::before {
   min-height: 100%;
   width: 100%;
   background:
-    linear-gradient(135deg, transparent 64.5%, var(--color-brand-navy-400) 64.6%, var(--color-brand-navy-200) 65.5%, var(--color-brand-navy-400) 67.5%, var(--color-brand-navy-400) 69%, transparent 69.1%),
     radial-gradient(circle at 50% 40%,
       var(--color-brand-steel-400, #1f2b47) 0%,
       #00031a 45%,
