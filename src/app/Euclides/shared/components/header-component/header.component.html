@@ -3,7 +3,7 @@
     class="ep-header__nav px-4 w-full max-w-6xl mx-auto h-14 flex items-center justify-between py-2 bg-brand-navy-300/70 backdrop-blur-xl border border-brand-golden-200/10 rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
 
     <a [routerLink]="'/about'" routerLinkActive="border-b-2" [routerLinkActiveOptions]="{ exact: true }"
-      class="relative text-brand-golden-300 flex gap-2 items-center font-medium h-full text-[12px] sm:text-sm transition-colors duration-300 hover:text-brand-golden-400">
+      class="relative text-brand-golden-300 flex gap-2 items-center font-medium h-full text-[12px] sm:text-sm text-nowrap transition-colors duration-300 hover:text-brand-golden-400">
       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
         <path d="M0 0h24v24H0z" fill="none" />
         <path fill="currentColor"
@@ -35,8 +35,7 @@
           CV
         </span>
       </a>
-      <button
-      (click)="toggleSidebar()"
+      <button (click)="toggleSidebar()"
         class="text-brand-golden-300 cursor-pointer lg:hidden bg-brand-navy-200 border backdrop-blur-2xl border-brand-golden-300/10 hover:bg-brand-golden-100/20 tracking-widest transition-colors duration-500 text-[9px] sm:text-[12px] flex items-center p-2 sm:p-3 rounded-lg font-bold justify-center gap-1">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" viewBox="0 0 24 24">
           <path d="M0 0h24v24H0z" fill="none" />

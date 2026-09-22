@@ -1,14 +1,14 @@
-<app-header-component [routes]="routes()" [sidebarState]="sidebarOpen()" (changeSidebar)="toggleSidebar()"/>
+<app-header-component [routes]="routes()" [sidebarState]="sidebarOpen()" (changeSidebar)="toggleSidebar()" />
 
 
 @if (sidebarOpen() == true) {
-  <div
-    class="fixed inset-0 z-101 bg-black/40 backdrop-blur-[2px] lg:hidden transition-opacity duration-300 opacity-100 pointer-events-auto">
-  </div>
+<div (click)="toggleSidebar()"
+  class="fixed inset-0 z-101 bg-black/40 backdrop-blur-[2px] lg:hidden transition-opacity duration-300 opacity-100 pointer-events-auto">
+</div>
 }
 
 
-<app-sidebar-component [sidebarState]="sidebarOpen()" (changeSidebar)="toggleSidebar()"/>
+<app-sidebar-component [sidebarState]="sidebarOpen()" (changeSidebar)="toggleSidebar()" />
 
 
 <!-- MAIN -->

@@ -7,7 +7,7 @@ import { RouteInterface } from '../interfaces/routes.interface';
 export class NavigationService {
 
   private readonly _routes = signal<RouteInterface[]>([
-    { path: 'about', label: 'Sobre_mi' },
+    { path: 'about', label: 'Sobre mi' },
     { path: 'skills', label: 'Habilidades' },
     { path: 'projects', label: 'Proyectos' },
     { path: 'certifications', label: 'Certificaciones' },
@@ -17,5 +17,5 @@ export class NavigationService {
   ]);
 
   // retorna una version de solo lectura de una señal y no puede ser modificada usando metodos de actualización
-  routes = this._routes.asReadonly(); 
+  routes = this._routes.asReadonly();
 }

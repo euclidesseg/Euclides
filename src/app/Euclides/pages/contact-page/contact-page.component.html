@@ -1,5 +1,5 @@
-<div class="ep-contacts w-full px-6 md:px-10 lg:px-14 py-16 font-space">
-        <div class="w-full max-w-6xl mx-auto min-h-screen mt-26 py-16 lg:mt-4 flex flex-col items-center">
+<div class="ep-contacts w-full px-6 md:px-10 lg:px-14 pt-16 font-space">
+    <div class="w-full max-w-6xl mx-auto min-h-screen mt-26 py-16 lg:mt-4 flex flex-col items-center">
         <div class="w-full flex items-center justify-between gap-6 mb-16">
             <h2 class=" text-brand-golden-100 text-xl md:text-2xl lg:text-4xl">Contactos</h2>
             <div class="h-px w-full opacity-[0.05] flex-1 bg-brand-golden-100"></div>
@@ -15,11 +15,13 @@
                     </div>
                     <div class="border-b-3 border-r-3 border-brand-golden-200 h-4 w-4 absolute z-9 bottom-0 right-0">
                     </div>
-                    <span class="text-center text-brand-golden-100 font-space font-bold block tracking-widest text-3xl sm:text-4xl md:text-3xl lg:text-2xl">Contactemos</span>
+                    <span
+                        class="text-center text-brand-golden-100 font-space font-bold block tracking-widest text-3xl sm:text-4xl md:text-3xl lg:text-2xl">Contactemos</span>
                 </div>
                 <div class="bg-brand-navy-400/90 border border-brand-golden-300/20 py-6 rounded-lg">
                     <div>
-                        <div class="relative z-19 flex flex-col items-center pt-5 px-4 font-space text-brand-golden-300">
+                        <div
+                            class="relative z-19 flex flex-col items-center pt-5 px-4 font-space text-brand-golden-300">
                             <h2 class="text-[40px] font-bold uppercase tracking-wide text-center drop-shadow-md">
                                 <span>
                                     <span dir="auto">AEUCLIDES</span>
@@ -48,35 +50,38 @@
             <div class="md:col-span-7 lg:col-span-9 flex flex-col justify-between gap-4">
                 <div class="flex flex-col lg:grid lg:grid-cols-12 gap-4">
                     <div class="lg:col-span-7 flex flex-col items-center justify-start gap-4">
-                        <div class="ep-contacts__email bg-brand-navy-400/90 py-6 text-brand-golden-300 w-full font-bold border border-brand-golden-300/20 flex items-center justify-center gap-6 rounded-lg">
+                        <div
+                            class="ep-contacts__email bg-brand-navy-400/90 py-6 text-brand-golden-300 w-full font-bold border border-brand-golden-300/20 flex items-center justify-center gap-6 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 16 16">
                                 <path d="M0 0h16v16H0z" fill="none" />
-                                <path fill="currentColor" d="M15 2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm0 1.707l-6.285 6.295a1 1 0 0 1-1.419.002L1 3.707v8.585l3.146-3.146a.5.5 0 1 1 .708.708L1.706 13h12.587l-3.147-3.146a.5.5 0 0 1 .708-.708L15 12.293zM14.292 3H1.707l6.298 6.298z" />
+                                <path fill="currentColor"
+                                    d="M15 2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm0 1.707l-6.285 6.295a1 1 0 0 1-1.419.002L1 3.707v8.585l3.146-3.146a.5.5 0 1 1 .708.708L1.706 13h12.587l-3.147-3.146a.5.5 0 0 1 .708-.708L15 12.293zM14.292 3H1.707l6.298 6.298z" />
                             </svg>
-                            <span class="block text-sm sm:text-lg md:text-xl lg:text-2xl text-center text-brand-golden-100 font-space">euclides2696@gmail.com
+                            <span
+                                class="block text-sm sm:text-lg md:text-xl text-center text-brand-golden-100 font-space">euclides2696@gmail.com
                             </span>
-                            <button
-                                type="button"
-                                (click)="copyEmail()"
+                            <button type="button" (click)="copyEmail()"
                                 class="shadow-md shadow-brand-navy-300 border p-3 rounded-lg border-brand-golden-300/20 cursor-pointer">
 
                                 @if (!copied()) {
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 32 32">
-                                        <path d="M0 0h32v32H0z" fill="none" />
-                                        <path fill="currentColor" d="M28 10v18H10V10zm0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2" />
-                                        <path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z" />
-                                    </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 32 32">
+                                    <path d="M0 0h32v32H0z" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M28 10v18H10V10zm0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2" />
+                                    <path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z" />
+                                </svg>
                                 } @else {
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 16 16">
-                                        <path d="M0 0h16v16H0z" fill="none" />
-                                        <path fill="currentColor" d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093l3.473-4.425z" />
-                                    </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 16 16">
+                                    <path d="M0 0h16v16H0z" fill="none" />
+                                    <path fill="currentColor"
+                                        d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093l3.473-4.425z" />
+                                </svg>
                                 }
                             </button>
                         </div>
-                        <div class="ep-contacts__github bg-brand-navy-400/90 text-brand-golden-300 w-full min-h-16 py-4 border border-brand-golden-300/20 rounded-lg">
-                            <div
-                                class="relative z-10 flex items-center justify-between px-2 pt-2 shrink-0">
+                        <div
+                            class="ep-contacts__github bg-brand-navy-400/90 text-brand-golden-300 w-full min-h-16 py-4 border border-brand-golden-300/20 rounded-lg">
+                            <div class="relative z-10 flex items-center justify-between px-2 shrink-0">
                                 <div class="flex items-center gap-3">
                                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img"
                                         viewBox="0 0 24 24" height="35" width="35" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +89,8 @@
                                             d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12">
                                         </path>
                                     </svg>
-                                    <div class="font-code text-brand-golden-100 font-semibold text-sm md:text-[20px] truncate">
+                                    <div
+                                        class="font-code text-brand-golden-100 font-semibold text-sm md:text-[20px] truncate">
                                         <span>github/</span>
                                         <span>euclidesseg</span>
                                     </div>
@@ -100,66 +106,107 @@
                                 </a>
                             </div>
                             <div class="wrapper text-brand-golden-100">
-                                <div class="itemLeft item1 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">Curso de Java</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Curso de Java desde nivel principiante e intermedio</p>
+                                <div
+                                    class="itemLeft item1 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        Curso de Java</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Curso de Java
+                                        desde nivel principiante e intermedio</p>
                                 </div>
 
-                                <div class="itemLeft item2 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">Java Avanzado</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Curso de nivel avanzado en Java</p>
+                                <div
+                                    class="itemLeft item2 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        Java Avanzado</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Curso de nivel
+                                        avanzado en Java</p>
                                 </div>
 
-                                <div class="itemLeft item3 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">Curso de Git</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Este repositorio organiza los comandos más importantes de Git</p>
+                                <div
+                                    class="itemLeft item3 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        Curso de Git</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Este repositorio
+                                        organiza los comandos más importantes de Git</p>
                                 </div>
 
-                                <div class="itemLeft item4 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">Spring Security</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Documentación e implementación de JWT</p>
+                                <div
+                                    class="itemLeft item4 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        Spring Security</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Documentación e
+                                        implementación de JWT</p>
                                 </div>
 
-                                <div class="itemLeft item5 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">Microservicios</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Implementación de microservicios con Spring Boot</p>
+                                <div
+                                    class="itemLeft item5 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        Microservicios</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Implementación
+                                        de microservicios con Spring Boot</p>
                                 </div>
 
-                               
+
                             </div>
 
                             <div class="wrapper text-brand-golden-100">
-                                <div class="itemRight item1 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">euclides-editor</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Librería, editor de texto para Angular</p>
+                                <div
+                                    class="itemRight item1 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        euclides-editor</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Librería, editor
+                                        de texto para Angular</p>
                                 </div>
 
-                                <div class="itemRight item2 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">euclides-editor-landing</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Página web con documentación para la librería euclides-editor</p>
+                                <div
+                                    class="itemRight item2 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        euclides-editor-landing</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Página web con
+                                        documentación para la librería euclides-editor</p>
                                 </div>
 
-                                <div class="itemRight item3 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">SECOP II</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Obtiene datos públicos desde SECOP II</p>
+                                <div
+                                    class="itemRight item3 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        SECOP II</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Obtiene datos
+                                        públicos desde SECOP II</p>
                                 </div>
 
-                                <div class="itemRight item4 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">Spring Boot API REST</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Documentación e implementación de APIs</p>
+                                <div
+                                    class="itemRight item4 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        Spring Boot API REST</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Documentación e
+                                        implementación de APIs</p>
                                 </div>
 
-                                <div class="itemRight item5 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
-                                    <p class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">Synap</p>
-                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Blog personal</p>
+                                <div
+                                    class="itemRight item5 shrink-0 rounded-xl border border-brand-golden-100/15 flex flex-col gap-2 justify-center px-5">
+                                    <p
+                                        class="font-[Space_Grotesk,sans-serif] font-bold text-[15px] tracking-wide leading-tight line-clamp-1">
+                                        Synap</p>
+                                    <p class="font-[Space_Grotesk,sans-serif] text-[13px] line-clamp-2">Blog personal
+                                    </p>
                                 </div>
 
-                            
+
                             </div>
                         </div>
                     </div>
                     <div class="lg:col-span-5 flex gap-4 flex-col">
-                        <div class="ep-contacts__linkedin relative border text-brand-golden-200 border-brand-golden-300/20 flex flex-col justify-between h-full p-6 bg-brand-navy-400/90 rounded-lg">
+                        <div
+                            class="ep-contacts__linkedin relative border text-brand-golden-200 border-brand-golden-300/20 flex flex-col justify-between h-full p-6 bg-brand-navy-400/90 rounded-lg">
                             <div class="">
                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
                                     class="text-[50px] md:text-[50px]" height="1em" width="1em"
@@ -185,9 +232,7 @@
                             </div>
                         </div>
                         <a class="ep-contacts__letcode bg-brand-navy-400/90 z-99 rounded-lg border border-brand-golden-300/20 text-brand-golden-200 relative flex flex-col items-start gap-8 h-full p-6 md:p-4"
-                        href="https://leetcode.com/u/euclidesseg/"
-                        target="_blank"
-                        >
+                            href="https://leetcode.com/u/euclidesseg/" target="_blank">
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="60"
                                 height="60" class="" aria-label="LeetCode">
                                 <path
@@ -206,7 +251,8 @@
                     </div>
                 </div>
                 <div class="w-full flex flex-col lg:flex-row gap-6 text-brand-golden-300">
-                    <div class="ep-contacts__youtube relative text-brand-golden-300 flex items-center py-8 justify-center gap-4 text-[25px] font-space px-4">
+                    <div
+                        class="ep-contacts__youtube relative text-brand-golden-300 flex items-center py-8 justify-center gap-4 text-[25px] font-space px-4">
                         <div class="border-t-3 border-l-3 border-brand-golden-200 h-4 w-4 absolute z-9 top-0 left-0">
                         </div>
                         <div class="border-t-3 border-r-3 border-brand-golden-200 h-4 w-4 absolute z-9 top-0 right-0">
@@ -235,7 +281,8 @@
                     </div>
                     <div
                         class="bg-brand-navy-400/90 text-brand-golden-100 relative flex items-center lg:flex-row justify-center rounded-lg border border-brand-golden-300/20 py-4 px-6 md:px-10">
-                        <p class="font-space font-bold relative z-10 tracking-wide text-center text-3xl md:text-2xl lg:text-3xl ">
+                        <p
+                            class="font-space font-bold relative z-10 tracking-wide text-center text-3xl md:text-2xl lg:text-3xl ">
                             <span>
                                 Conectemos y construyamos algo increíble juntos.
                             </span>
