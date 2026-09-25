@@ -1,62 +1,77 @@
-.ep-feel {
-  min-width: 100%;
-
-  mask-image: linear-gradient(
-    90deg,
-    #0000,
-    #000 8% 92%,
-    #0000
-  );
-
-  background-color: color-mix(
-    in srgb,
-    var(--color-brand-golden-400) 50%,
-    var(--color-brand-golden-400) 50%
-  );
-
-  display: flex;
-  gap: 200px;
-}
-
-.ep-feel__right {
-  min-width: 100%;
-  font-size: .9rem;
-  padding-block: 8px;
-
-  display: flex;
-  user-select: none;
-  overflow: hidden;
-
-  --gap: 20px;
-
-  gap: var(--gap);
-
-  animation: scroll 13s linear infinite;
-}
-
-.ep-feel__item {
-  min-width: 15%;
-  flex-shrink: 0;
-
+.ep-feel-section {
+  width: 100%;
+  color: #fff;
+  margin: 0;
+  height: auto;
+  padding-bottom: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
-
 }
 
-.ep-feel:hover .ep-feel__right {
+/* optional title */
+.feel__title {
+  color: rgb(151, 151, 44);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+
+.ep-feel__container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  mask-image: linear-gradient(90deg,
+      #0000,
+      #000 8% 92%,
+      #0000);
+  background-color: color-mix(in srgb, var(--color-brand-navy-400) 20%, var(--color-brand-navy-400) 20%);
+}
+
+.ep-feel__track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.ep-feel__group {
+  display: flex;
+  align-items: center;
+  gap: 6.5rem;
+  flex-shrink: 0;
+  padding-right: 6.5rem;
+}
+
+.ep-feel__container:hover .ep-feel__track {
   animation-play-state: paused;
 }
 
-.ep-feel__item span {
-  font-weight: bold;
-  font-family: var(--font-inter);
+.ep-feel__track__item {
+  display: flex;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var() percentage, color percentage);
+  gap: .5rem;
+  pad: 0 40px;
+  color: var(--color-brand-golden-300);
+  font-size: .65rem;
+  font-weight: 600;
   text-transform: uppercase;
+  font-family: var(--font-inter);
+  transition: all 1s ease;
 }
 
-@keyframes scroll {
-  to {
-    transform: translateX(calc(-100% - 200px));
+.ep-feel__track__item:hover {
+  color: var(--color-brand-golden-400);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
   }
 }
