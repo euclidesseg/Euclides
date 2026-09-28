@@ -1,5 +1,4 @@
 import { Component, computed, signal } from '@angular/core';
-import { LucideAngularModule, LucidePanelsLeftBottom, PaletteIcon, CodeXmlIcon } from 'lucide-angular';
 
 export interface Experience {
   id: number;
@@ -20,16 +19,12 @@ export interface Experience {
 
 @Component({
   imports: [
-    LucideAngularModule
   ],
   templateUrl: './experience-page.component.html',
 })
 export default class ExperiencePageComponent {
 
-   PanelLeftBottom = computed(() => LucidePanelsLeftBottom);
-   PaletteIcon = computed(() => PaletteIcon);
-   CodeXmlIcon = computed(()=>CodeXmlIcon);
-
+  
   experiences = signal<Experience[]>([
     {
       id: 1,

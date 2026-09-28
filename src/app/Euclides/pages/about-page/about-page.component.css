@@ -1,12 +1,5 @@
 .ep-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    padding: 0 1.5rem;
-
-    background-color: var(--color-brand-bg);
 }
 
 .ep-hero__content {

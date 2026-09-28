@@ -9,7 +9,6 @@ import {
   effect,
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LucideAngularModule } from 'lucide-angular';
 import { FooterComponent } from '../../shared/components/footer-component/footer.component';
 import { SidebarComponent } from '../../shared/components/sidebar-component/sidebar.component';
 import { HeaderComponent } from '../../shared/components/header-component/header.component';
@@ -18,7 +17,6 @@ import { NavigationService } from '../../shared/services/navigation.service';
 @Component({
   imports: [
     RouterOutlet,
-    LucideAngularModule,
     FooterComponent,
     SidebarComponent,
     HeaderComponent
