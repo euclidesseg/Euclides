@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   category: 'Lenguaje' | 'Backend' | 'Frontend' | 'Tools' | 'Agents';
-  icon: SkillIcon;
+  icon: string;
 }
 export interface SkillIcon {
   width: number;

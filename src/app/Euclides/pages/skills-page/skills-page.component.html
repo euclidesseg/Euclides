@@ -19,26 +19,24 @@
           <div class="px-2 py-1.5 border border-brand-golden-200/5 rounded-xl text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter">Herramientas</div>
         </div>
         <div class="flex w-full items-start justify-evenly sm:justify-center flex-wrap gap-4 py-4">
-          @for (skill of skills(); track skill.name) {
-             <div 
-             class="w-full max-w-36 flex items-center justify-start gap-2.5
+         @for (skill of skills(); track skill.name) {
+            <div
+              class="w-full max-w-36 flex items-center justify-start gap-2.5
                     text-brand-golden-300
                     border border-brand-golden-200/10
                     py-2 px-4 rounded-lg
                     uppercase text-[12px] tracking-wide"
-               >
-              @if (skill.icon) {
-                <svg
-                  [attr.viewBox]="'0 0 ' + skill.icon.width + ' ' + skill.icon.height"
-                  [innerHTML]="skill.icon.body"
-                  class="w-5 h-5 shrink-0"
-                  aria-hidden="true"
-                ></svg>
-              }
+            >
+              <iconify-icon
+                [attr.icon]="skill.icon"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              ></iconify-icon>
 
               <span>{{ skill.name }}</span>
             </div>
-          } 
+          }
           <div class="w-full max-w-36 flex items-center justify-start gap-2.5 text-brand-golden-300 border border-brand-golden-200/10 py-2 px-4 rounded-lg uppercase text-[12px] tracking-wide">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 16 16">
               <path d="M0 0h16v16H0z" fill="none" />
@@ -80,3 +78,15 @@
     </div>
   </div>
 </section>
+
+<div class="flex items-center gap-4 p-4 mt-8 border border-brand-golden-200/10 rounded-lg">
+  <span class="text-brand-golden-100">
+    Prueba Iconify:
+  </span>
+
+  <iconify-icon
+    icon="simple-icons:angular"
+    width="40"
+    height="40"
+  ></iconify-icon>
+</div>
