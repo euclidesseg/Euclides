@@ -1,14 +1,21 @@
-.ep-skills__title-content{
+.ep-skills__title-content {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 4rem;
 }
-.ep-skills__title{
+
+.ep-skills__title {
   color: var(--color-brand-golden-100);
 }
-.e-skills__content section{
+
+.e-skills__content section {
   width: 100%;
   background-color: color-mix(in srgb, var(--color-brand-navy-400) 30%, var(--color-brand-navy-400) 30%);
+}
+
+.iconify-icon.svg {
+  width: 4rem;
+  height: 4rem;
 }

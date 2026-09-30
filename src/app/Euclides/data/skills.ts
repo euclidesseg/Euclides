@@ -3,76 +3,86 @@ export const skills: Skill[] = [
   {
     name: 'Java',
     category: 'Lenguaje',
-    icon: 'devicon:java'
+    icon: 'bxl:java'
   },
   {
     name: 'JavaScript',
     category: 'Lenguaje',
-    icon: 'simple-icons:javascript'
+    icon: 'bxl:javascript'
   },
   {
     name: 'TypeScript',
     category: 'Lenguaje',
-    icon: 'simple-icons:typescript'
+    icon: 'bxl:typescript'
   },
   {
-    name: 'SQL',
+    name: 'Postgre',
     category: 'Lenguaje',
-    icon: 'simple-icons:postgresql'
+    icon: 'bxl:postgresql'
   },
   {
     name: 'Spring Boot',
     category: 'Backend',
-    icon: 'simple-icons:springboot'
+    icon: 'thesvg:spring-boot'
   },
   {
     name: 'Angular',
     category: 'Frontend',
-    icon: 'simple-icons:angular'
+    icon: 'bxl:angular'
   },
   {
     name: 'Vue',
     category: 'Frontend',
-    icon: 'simple-icons:vuedotjs'
+    icon: 'carbon:logo-vue'
   },
   {
     name: 'CSS',
     category: 'Frontend',
-    icon: 'simple-icons:css'
+    icon: 'fa6-brands:css'
   },
   {
     name: 'Tailwind CSS',
     category: 'Frontend',
-    icon: 'simple-icons:tailwindcss'
+    icon: 'bxl:tailwind-css'
   },
   {
     name: 'Bootstrap',
     category: 'Frontend',
-    icon: 'simple-icons:bootstrap'
+    icon: 'bxl:bootstrap'
   },
   {
     name: 'GSAP',
     category: 'Frontend',
-    icon: 'simple-icons:gsap'
+    icon: 'bxl:gsap'
   },
   {
     name: 'PostgreSQL',
     category: 'Backend',
-    icon: 'simple-icons:postgresql'
+    icon: 'bxl:postgresql'
   },
   {
     name: 'Git',
     category: 'Tools',
-    icon: 'simple-icons:git'
+    icon: 'bxl:git'
   },
   {
     name: 'GitHub',
     category: 'Tools',
-    icon: 'simple-icons:github'
+    icon: 'bxl:github'
+  },
+  {
+    name: 'Postman',
+    category: 'Tools',
+    icon: 'devicon-plain:postman'
   },
   {
     name: 'OpenCode',
     category: 'Agents',
     icon: 'simple-icons:opencode'
+  },
+  {
+    name: 'Antigravity',
+    category: 'Agents',
+    icon: 'bxl:google-antigravity'
   }
 ];
