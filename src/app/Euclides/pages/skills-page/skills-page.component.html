@@ -12,26 +12,22 @@
     <div class="e-skills__content font-code">
       <section
         class="w-full p-4 border border-brand-navy-200/50 rounded-lg flex gap-2.5 items-end justify-end flex-col ">
-        <div
-          class="w-full lg:w-1/2 mr-0 flex items-center flex-wrap justify-between gap-1.5 p-2 border border-brand-golden-200/5 rounded-lg px-8">
-          <div
-            class="px-2 py-1.5 border border-brand-golden-200/5 rounded-xl text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter">
-            Todas</div>
-          <div
-            class="px-2 py-1.5 border border-brand-golden-200/5 rounded-xl text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter">
-            Lenguajes</div>
-          <div
-            class="px-2 py-1.5 border border-brand-golden-200/5 rounded-xl text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter">
-            Frontend</div>
-          <div
-            class="px-2 py-1.5 border border-brand-golden-200/5 rounded-xl text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter">
-            Backend</div>
-          <div
-            class="px-2 py-1.5 border border-brand-golden-200/5 rounded-xl text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter">
-            Herramientas</div>
+       <div class="w-full lg:w-1/2 mr-0 flex items-center flex-wrap justify-between gap-1.5 p-2 border border-brand-golden-200/5 rounded-lg px-8">
+          @for (option of filterOptions; track option.value) {
+            <button
+              class="px-2 py-1.5 border border-brand-golden-200/5 rounded-lg text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter"
+              [class.bg-brand-golden-300!]="filter() === option.value"
+              [class.text-brand-navy-400]="filter() === option.value"
+              [class.font-semibold]="filter() === option.value"
+              (click)="changeFilter(option.value)"
+            >
+              {{ option.label }}
+            </button>
+          }
         </div>
+
         <div class="w-full flex items-start justify-evenly sm:justify-center flex-wrap gap-4 py-4">
-          @for (skill of skills(); track skill.name) {
+          @for (skill of filteredSkills(); track skill.name) {
           <div class="max-w-36 flex items-center justify-start gap-2.5
                     text-brand-golden-300
                     border border-brand-golden-200/10

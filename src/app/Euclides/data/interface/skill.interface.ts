@@ -1,10 +1,6 @@
 export interface Skill {
   name: string;
-  category: 'Lenguaje' | 'Backend' | 'Frontend' | 'Tools' | 'Agents';
+  category: CategorySkill;
   icon: string;
 }
-export interface SkillIcon {
-  width: number;
-  height: number;
-  body: string;
-}
+export type CategorySkill = 'Alls'|'Lenguaje' | 'Backend' | 'Frontend' | 'Tools' | 'Agents';
