@@ -1,8 +1,14 @@
 <section class="ep-skills w-full px-6 md:px-10 lg:px-14 pt-16 font-space">
   <div class="w-full max-w-6xl mx-auto min-h-screen mt-26 py-16 lg:mt-4">
     <div class="ep-skills__title-content w-full">
-      <h2 class="ep-skills__title text-xl md:text-2xl lg:text-4xl">Habilidades</h2>
-      <div class="ep-skills__line border w-full h-px h-.5 opacity-[0.05] border-brand-golden-100"></div>
+      <h2 class="ep-skills__title font-semibold text-xl md:text-2xl lg:text-4xl tracking-widest">Habilidades</h2>
+      <div class="ep-skills__line w-full h-px flex-1 opacity-[0.05] bg-brand-golden-100"></div>
+    </div>
+    <div class="max-w-2xl space-y-2 mb-12">
+      <p class="font-space text-sm md:text-lg lg:text-xl text-brand-ivory-300 leading-relaxed">
+        Estas son los lenguajes y herramientas que domino, puedo construir soluciones haciendo uso de cualquiera de
+        estas herramientas.
+      </p>
     </div>
     <div class="max-w-full">
       <app-feel-component />
@@ -11,32 +17,34 @@
 
     <div class="e-skills__content font-code">
       <section
-        class="w-full p-4 border border-brand-navy-200/50 rounded-lg flex gap-2.5 items-end justify-end flex-col ">
-       <div class="w-full lg:w-1/2 mr-0 flex items-center flex-wrap justify-between gap-1.5 p-2 border border-brand-golden-200/5 rounded-lg px-8">
+        class="w-full p-4 border border-brand-golden-100/5 rounded-lg flex gap-2.5 items-end justify-end flex-col ">
+        <div
+          class="ep-skills__filters w-full mr-0 flex items-center flex-wrap justify-start md:justify-end gap-1.5 p-2 border border-brand-golden-200/5 rounded-lg px-2 lg:px-8">
           @for (option of filterOptions; track option.value) {
-            <button
-              class="px-2 py-1.5 border border-brand-golden-200/5 rounded-lg text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter"
-              [class.bg-brand-golden-300!]="filter() === option.value"
-              [class.text-brand-navy-400]="filter() === option.value"
-              [class.font-semibold]="filter() === option.value"
-              (click)="changeFilter(option.value)"
-            >
-              {{ option.label }}
-            </button>
+          <button
+            class="px-2 py-1.5 border border-brand-golden-200/5 rounded-lg text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter"
+            [class.bg-brand-golden-300!]="filter() === option.value"
+            [class.text-brand-navy-400]="filter() === option.value" [class.font-semibold]="filter() === option.value"
+            (click)="changeFilter(option.value)">
+            {{ option.label }}
+          </button>
           }
         </div>
 
-        <div class="w-full flex items-start justify-evenly sm:justify-center flex-wrap gap-4 py-4">
+        <div class="ep-skills__list py-4">
           @for (skill of filteredSkills(); track skill.name) {
-          <div class="max-w-36 flex items-center justify-start gap-2.5
-                    text-brand-golden-300
-                    border border-brand-golden-200/10
-                    py-2 px-1.5 rounded-lg
-                    uppercase text-[12px] tracking-wide">
-            <iconify-icon [attr.icon]="skill.icon" width="30" height="30" aria-hidden="true"></iconify-icon>
+          <div class="ep-skills__item group">
+            <div class="ep-skills__item__glow"></div>
+            <div class="ep-skills__item__shine"></div>
+            <div
+              class="w-auto p-2 flex items-center justify-center transition-colors duration-500 bg-brand-golden-100/10 group-hover:bg-brand-golden-100/20 border border-brand-golden-100/2 rounded-md">
+              <iconify-icon [attr.icon]="skill.icon" width="30" height="30" aria-hidden="true"></iconify-icon>
+            </div>
 
-            <div class="hidden sm:flex p-0.5 items-center justify-center text-center">
-              <span class="text-nowrap">{{ skill.name }}</span>
+            <div class="flex flex-col p-0.5 items-start justify-center text-center tracking-wider">
+              <span class="text-nowrap skill__title font-semibold">{{ skill.name }}</span>
+              <span class="text-nowrap skill__category text-brand-golden-100/50 text-[12px] tracking-widest">{{
+                skill.category }}</span>
             </div>
           </div>
           }

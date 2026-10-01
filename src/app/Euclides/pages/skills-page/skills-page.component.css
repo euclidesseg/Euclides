@@ -7,7 +7,7 @@
 }
 
 .ep-skills__title {
-  color: var(--color-brand-golden-100);
+  color: var(--color-brand-ivory-300);
 }
 
 .e-skills__content section {
@@ -15,7 +15,81 @@
   background-color: color-mix(in srgb, var(--color-brand-navy-400) 30%, var(--color-brand-navy-400) 30%);
 }
 
-.iconify-icon.svg {
-  width: 4rem;
-  height: 4rem;
+.ep-skills__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: .5rem;
+}
+
+.ep-skills__item {
+  display: flex;
+  justify-content: start;
+  gap: .5rem;
+  color: var(--color-brand-golden-300);
+  border: 1px solid color-mix(in srgb, var(--color-brand-golden-300) 5%, var(--color-brand-golden-300) 5%);
+  text-transform: uppercase;
+  padding: 1rem .5rem;
+  border-radius: .5rem;
+  transition-duration: 500ms;
+  transition-property: border;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 500ms cubic-bezier(.16, 1, .3, 1),
+    border-color 400ms ease,
+    background 400ms ease,
+    box-shadow 400ms ease;
+}
+
+.ep-skills__item__glow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: rgb(216 189 150 / .07);
+  filter: blur(30px);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events: none;
+}
+
+.ep-skills__item__shine {
+  position: absolute;
+  top: -120%;
+  left: -160%;
+  width: 70%;
+  height: 300%;
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(232, 225, 217, 0.089),
+      transparent);
+  transform: rotate(25deg);
+  transition: left 800ms ease;
+  pointer-events: none;
+}
+
+.ep-skills__item:hover {
+  border-color: color-mix(in srgb, var(--color-brand-golden-300) 10%, var(--color-brand-golden-300) 10%);
+  transform: translateY(-2px);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--color-brand-golden-200) 7%, transparent),
+      rgb(255 255 255 / 0.02));
+}
+
+.ep-skills__item:hover .ep-skills__item__glow {
+  opacity: 1;
+}
+
+.ep-skills__item:hover .ep-skills__item__shine {
+  left: 160%;
+}
+
+@media (width >=293px) {
+  .ep-skills__list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }

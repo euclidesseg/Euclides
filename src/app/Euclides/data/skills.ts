@@ -56,9 +56,9 @@ export const skills: Skill[] = [
     icon: 'bxl:gsap'
   },
   {
-    name: 'PostgreSQL',
+    name: 'Sql',
     category: 'Backend',
-    icon: 'bxl:postgresql'
+    icon: 'griddy-icons:sql'
   },
   {
     name: 'Git',
