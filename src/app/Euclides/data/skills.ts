@@ -17,7 +17,7 @@ export const skills: Skill[] = [
   },
   {
     name: 'Postgre',
-    category: 'Lenguaje',
+    category: 'Backend',
     icon: 'bxl:postgresql'
   },
   {
@@ -74,6 +74,11 @@ export const skills: Skill[] = [
     name: 'Postman',
     category: 'Tools',
     icon: 'devicon-plain:postman'
+  },
+  {
+    name: 'pnpm',
+    category: 'Tools',
+    icon: 'file-icons:pnpm'
   },
   {
     name: 'OpenCode',

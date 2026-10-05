@@ -1,4 +1,4 @@
-.ep-feel-section {
+.ep-ribbon-section {
   width: 100%;
   color: #fff;
   margin: 0;
@@ -10,7 +10,7 @@
 }
 
 /* optional title */
-.feel__title {
+.ribbon__title {
   color: rgb(151, 151, 44);
   font-size: 0.95rem;
   font-weight: 500;
@@ -19,7 +19,7 @@
   margin-bottom: 45px;
 }
 
-.ep-feel__container {
+.ep-ribbon__container {
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -30,13 +30,13 @@
   background-color: color-mix(in srgb, var(--color-brand-navy-400) 20%, var(--color-brand-navy-400) 20%);
 }
 
-.ep-feel__track {
+.ep-ribbon__track {
   display: flex;
   width: max-content;
   animation: scroll-left 20s linear infinite;
 }
 
-.ep-feel__group {
+.ep-ribbon__group {
   display: flex;
   align-items: center;
   gap: 6.5rem;
@@ -44,11 +44,11 @@
   padding-right: 6.5rem;
 }
 
-.ep-feel__container:hover .ep-feel__track {
+.ep-ribbon__container:hover .ep-ribbon__track {
   animation-play-state: paused;
 }
 
-.ep-feel__track__item {
+.ep-ribbon__track__item {
   display: flex;
   align-items: center;
   border: 1px solid color-mix(in srgb, var() percentage, color percentage);
@@ -62,7 +62,7 @@
   transition: all 1s ease;
 }
 
-.ep-feel__track__item:hover {
+.ep-ribbon__track__item:hover {
   color: var(--color-brand-golden-400);
 }
 

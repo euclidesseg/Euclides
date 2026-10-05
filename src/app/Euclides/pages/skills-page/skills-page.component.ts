@@ -1,16 +1,16 @@
 import 'iconify-icon'
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit, signal, CUSTOM_ELEMENTS_SCHEMA, computed } from '@angular/core';
-import { FeelComponent } from '../../components/feel-component/feel.component';
 import { EuclidesService } from '../../services/euclides.service';
 import { CategorySkill, Skill } from '../../data/interface/skill.interface';
+import { SoftSkillsRibbonComponent } from '../../components/soft-skills-ribbon-component/soft-skills-ribbon.component';
 export interface CardItem {
   title: string;
   description: string;
 }
 @Component({
   selector: 'app-skills-page',
-  imports: [CommonModule, FeelComponent],
+  imports: [CommonModule, SoftSkillsRibbonComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './skills-page.component.html',
   styleUrl: './skills-page.component.css',

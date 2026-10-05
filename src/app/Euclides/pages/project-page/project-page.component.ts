@@ -8,16 +8,7 @@ import { Project } from '../../data/interface/project.interface';
   selector: 'app-projects-page',
   imports: [RouterModule],
   templateUrl: './project-page.component.html',
-  styles: `
-    .animated__sircle-element{
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      inset: 1px;
-      background-color: red;
-      z-index: 1;
-    }
-  `,
+  styleUrl:'./project-page.component.css'
 })
 export default class ProjectsPageComponent {
   projects = signal<Project[]>([]);

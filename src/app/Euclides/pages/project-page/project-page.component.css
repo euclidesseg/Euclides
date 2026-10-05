@@ -1,0 +1,39 @@
+:host{
+  display: block;  
+}
+.ep-projects__card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+    border-radius:.5rem;
+    border: .5px solid color-mix(in srgb, var(--color-brand-slate-300) 10%, var(--color-brand-slate-300) 10%);
+    background-color:var(--color-brand-navy-300);
+    transition-duration: 500ms;
+    transition-property: border-color;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 320px;
+}
+.ep-projects__card:hover{
+    border-color: color-mix(in srgb,  var(--color-brand-golden-300) 15%,  var(--color-brand-golden-300) 15%);
+}
+.ep-projects__card::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* Reemplaza top/left/right/bottom. Cubre toda la tarjeta */
+    border-radius: inherit; /* Hereda los bordes redondeados de la tarjeta */
+    pointer-events: none; /* Evita que bloquee el clic del enlace <a> */
+    z-index: 0; /* Se mantiene detrás del contenido */
+
+    /* El gradiente radial: empieza en la esquina superior derecha (100% 0%) */
+    background: radial-gradient(circle at 100%0%, color-mix(in srgb, var(--color-brand-golden-300) 20%, transparent) 0%, transparent 60%);
+
+    /* Estado inicial: invisible */
+    opacity: 0;
+    transition: opacity 300ms ease; /* Transición suave */
+}
+
+.ep-projects__card:hover::after {
+    opacity: 1; /* Se muestra al hacer hover */
+}
