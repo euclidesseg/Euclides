@@ -28,3 +28,17 @@
   gap: .5rem;
   z-index: 9;
 }
+.ep-statistics__statistic::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: inherit;
+  z-index: 0;
+  pointer-events: none;
+  transition: 500ms opacity;
+  background: radial-gradient(circle at 0%100%, color-mix(in srgb, var(--color-brand-golden-300) 20%, transparent) 0%, transparent 60%);
+  opacity: 0;
+}
+.ep-statistics__statistic:hover::after{
+  opacity: 1;
+}
