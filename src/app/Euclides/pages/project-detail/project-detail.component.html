@@ -1,5 +1,5 @@
-<section class="max-w-7xl mx-auto">
-    <header class="mb-2 px-6">
+<section class="ep-project-detail w-full px-6 md:px-10 lg:px-14 pt-16 font-space min-h-screen">
+    <header class="w-full max-w-6xl mx-auto py-16">
         @if (project()?.state) {
         <span
             class="bg-brand-main/70 text-white rounded-xl text-sm px-2 py-1 mb-8 inline-block">{{project()?.state}}</span>
@@ -41,9 +41,10 @@
             <a [href]="project()?.npm" target="_blank"
                 class="flex items-center gap-2 px-5 py-2.5 text-white rounded-xl transition-all shadow-md hover:shadow-lg text-sm font-medium bg-linear-to-r from-orange-500 to-[#d32d1c]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128">
-                    <path fill="currentColor" d="M0 7.062C0 3.225 3.225 0 7.062 0h113.88c3.838 0 7.063 3.225 7.063 7.062v113.88c0 3.838-3.225 7.063-7.063 7.063H7.062c-3.837 0-7.062-3.225-7.062-7.063zm23.69 97.518h40.395l.05-58.532h19.494l-.05 58.581h19.543l.05-78.075l-78.075-.1l-.1 78.126z"/>
+                    <path fill="currentColor"
+                        d="M0 7.062C0 3.225 3.225 0 7.062 0h113.88c3.838 0 7.063 3.225 7.063 7.062v113.88c0 3.838-3.225 7.063-7.063 7.063H7.062c-3.837 0-7.062-3.225-7.062-7.063zm23.69 97.518h40.395l.05-58.532h19.494l-.05 58.581h19.543l.05-78.075l-78.075-.1l-.1 78.126z" />
                 </svg>
-               NPM
+                NPM
             </a>
             }
         </div>
@@ -73,7 +74,8 @@
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-linear-to-tr via-transparent to-transparent"></div>
             </div>
-            <div class="img-2 portrait-image absolute right-[-5%] top-[10%] w-[70%] aspect-square rounded-lg overflow-hidden transform -rotate-10 z-20 border-10 border-white shadow-lg">
+            <div
+                class="img-2 portrait-image absolute right-[-5%] top-[10%] w-[70%] aspect-square rounded-lg overflow-hidden transform -rotate-10 z-20 border-10 border-white shadow-lg">
                 <img src="{{p.imagesDetail[1]}}" alt="[Imagen de código fuente detallado]"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-linear-to-bl from-black/30 via-transparent to-transparent"></div>

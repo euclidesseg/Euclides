@@ -1,6 +1,6 @@
 <section class="ep-projects w-full px-6 md:px-10 lg:px-14 pt-16 font-space min-h-screen">
   <div class="max-w-6xl mx-auto py-16">
-    
+
     <!-- Header -->
     <div class="ep-projects__header flex flex-col gap-4 mb-16 relative">
       <div class="flex items-center gap-4">
@@ -10,48 +10,61 @@
         <div class="h-px flex-1 bg-brand-golden-100/5"></div>
       </div>
 
-      <h2 class="ep-projects__title font-space font-bold text-3xl md:text-5xl lg:text-6xl text-brand-ivory-200 tracking-tight">
+      <h2
+        class="ep-projects__title font-space font-bold text-3xl md:text-5xl lg:text-6xl text-brand-ivory-200 tracking-tight">
         Proyectos seleccionados
       </h2>
 
-      <p class="ep-projects__description font-space max-w-2xl text-sm md:text-lg lg:text-xl text-brand-slate-200 leading-relaxed">
-        Una selección de trabajos donde he aplicado mis habilidades técnicas para resolver problemas reales y crear experiencias digitales impactantes.
+      <p
+        class="ep-projects__description font-space max-w-2xl text-sm md:text-lg lg:text-xl text-brand-slate-200 leading-relaxed">
+        Una selección de trabajos donde he aplicado mis habilidades técnicas para resolver problemas reales y crear
+        experiencias digitales impactantes.
       </p>
     </div>
 
     <!-- Grid de Proyectos -->
     <div class="ep-projects__grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       @for (project of projects(); track project.id; let i = $index) {
-        <article class="ep-projects__card relative">
-          <a [routerLink]="['/euclides/projects', project.title]" class="absolute inset-0 z-0"></a>            
-          <!-- Contenido -->
-          <div class="ep-projects__card-index font-code text-brand-golden-300 text-sm mb-4">
-            [{{ (i + 1).toString().padStart(2, '0') }}]
-          </div>
+      <article class="ep-projects__card relative">
+        <a [routerLink]="['/euclides/projects', project.title]" class="absolute inset-0 z-0"></a>
+        <!-- Contenido -->
+        <div class="ep-projects__card-index font-code text-brand-golden-300 text-sm mb-4">
+          [{{ (i + 1).toString().padStart(2, '0') }}]
+        </div>
 
-          <!-- Título -->
-          <h3 class="ep-projects__card-title font-space text-xl md:text-2xl font-bold text-brand-ivory-200 mb-2 transition-colors duration-500 group-hover:text-brand-golden-200">
-            {{ project.title }}
-          </h3>
+        <!-- Título -->
+        <h3 class="ep-projects__card-title font-space text-xl md:text-2xl font-bold text-brand-ivory-200 mb-2">
+          {{ project.title }}
+        </h3>
 
-          <!-- Meta (Año y Rol) -->
-          <div class="ep-projects__card-meta font-code text-brand-golden-100/60 text-xs md:text-sm tracking-wider mb-4">
-            {{ project.year }} · {{ project.role }}
-          </div>
+        <!-- Meta (Año y Rol) -->
+        <div class="ep-projects__card-meta font-code text-brand-golden-100/60 text-xs md:text-sm tracking-wider mb-4">
+          {{ project.year }} · {{ project.role }}
+        </div>
 
-          <!-- Descripción -->
-          <p class="ep-projects__card-desc font-space text-brand-slate-200 text-sm md:text-base leading-relaxed flex-grow mb-8">
-            {{ project.shortDescription }}
-          </p>
+        <!-- Descripción -->
+        <p class="ep-projects__card-desc font-space text-brand-slate-200 text-sm md:text-base leading-relaxedgrow mb-8">
+          {{ project.shortDescription }}
+        </p>
 
-          <!-- Footer del Link -->
-          <div class="ep-projects__card-footer mt-auto pt-4 border-t border-brand-golden-100/10 flex items-center justify-between text-brand-golden-300 font-code text-sm">
-            <span class="transition-colors duration-300 group-hover:text-brand-golden-200">Ver detalles</span>
-            <span class="transition-transform duration-300 group-hover:translate-x-1 group-hover:text-brand-golden-200">
-              →
+        <!-- Footer del Link -->
+        <div
+          class="ep-projects__card-footer mt-auto pt-4 border-t border-brand-golden-100/10 flex items-center justify-between text-brand-golden-300 font-code text-sm">
+          @if (project.demoUrl) {
+          <a href="{{project.demoUrl}}" target="_blank"
+            class="flex items-center justify-center gap-2 text-brand-slate-300 group relative z-9">
+            <span class="transition-transform duration-300 group-hover:translate-x-1 group-hover:text-brand-golden-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 16 16">
+                <path d="M0 0h16v16H0z" fill="none" />
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+              </svg>
             </span>
-          </div>
-        </article>
+            <span class="transition-colors duration-300 group-hover:text-brand-golden-300 tracking-wider">Demo</span>
+          </a>
+          }
+        </div>
+      </article>
       }
     </div>
 

@@ -6,29 +6,32 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-project-detail',
   imports: [],
-  templateUrl:'./project-detail.component.html',
+  templateUrl: './project-detail.component.html',
+  styleUrl: './project-detail.component.css'
 })
-export default class ProjectDetail implements OnInit {
-  ngOnInit(): void {
-   this.getProjectbyTitle(this.projectTitle)
-  } 
 
-  
+export default class ProjectDetail implements OnInit {
+
+  ngOnInit(): void {
+    this.getProjectbyTitle(this.projectTitle)
+  }
+
+
   projectService = inject(EuclidesService);
   location = inject(Location);
-  projectTitle:string = inject(ActivatedRoute).snapshot.params['title'];
-  
-  isError = signal<string|null> (null);
+  projectTitle: string = inject(ActivatedRoute).snapshot.params['title'];
+
+  isError = signal<string | null>(null);
   project = signal<Project | null>(null);
 
- getProjectbyTitle(title: string) {
-  this.projectService.getProjectByTitle(title).subscribe({
-    next:(project) =>{
-      this.project.set(project)
-    },
-    error:(error) =>{
-      this.isError.set(error)
-    }
-  });
-}
+  getProjectbyTitle(title: string): void {
+    this.projectService.getProjectByTitle(title).subscribe({
+      next: (project) => {
+        this.project.set(project)!;
+      },
+      error: (error) => {
+        this.isError.set(error)
+      }
+    });
+  }
 }

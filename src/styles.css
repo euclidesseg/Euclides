@@ -8,6 +8,7 @@
   --font-space: "Space Grotesk", sans-serif;
   --font-code: "Google Sans Code", monospace;
   --font-lobster: "Lobster", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
   ;
   /*====Fonts==================*/
 
@@ -25,7 +26,7 @@
      ========================= */
   --color-brand-navy-200: #252a37;
   --color-brand-navy-300: #111420;
-    --color-brand-navy-400: #00030c;
+  --color-brand-navy-400: #00030c;
 
   /* =========================
      IVORY
@@ -81,25 +82,28 @@ app-root {
   overflow-x: hidden;
 }
 
-.ep-body__bg-layer{
+.ep-body__bg-layer {
   pointer-events: none;
   position: fixed;
   inset: 0;
   z-index: 0;
 }
-.ep-body__grid{
+
+.ep-body__grid {
   background-image:
     linear-gradient(to right, color-mix(in srgb, var(--color-brand-steel-300) 20%, var(--color-brand-steel-300) 20%) 1px, transparent 1px),
     linear-gradient(to bottom, color-mix(in srgb, var(--color-brand-steel-300) 20%, var(--color-brand-steel-300) 20%) 1px, transparent 1px);
-    background-size: 100px 100px;
+  background-size: 100px 100px;
 }
-.ep-body__dots{
+
+.ep-body__dots {
   background-image:
     radial-gradient(circle, var(--color-brand-steel-300) 1.4px, transparent 1.8px);
-    background-size: 25px 25px;
-    opacity: .6;
+  background-size: 25px 25px;
+  opacity: .6;
 }
-.ep-body__bignette{
+
+.ep-body__bignette {
   background: radial-gradient(ellipse at top, transparent 0%, var(--color-brand-navy-400)75%);
   opacity: .6;
 }
@@ -141,12 +145,12 @@ body::-webkit-scrollbar-thumb:hover,
 app-root::-webkit-scrollbar-thumb:hover {
   background: var(--color-brand-golden-300);
 }
-body.sidebar-open{
+
+body.sidebar-open {
   overflow: hidden;
   height: 100%;
 }
 
-body.sidebar-open::-webkit-scrollbar
-{
+body.sidebar-open::-webkit-scrollbar {
   display: none;
 }

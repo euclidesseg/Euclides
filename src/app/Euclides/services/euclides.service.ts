@@ -2,7 +2,7 @@
 import { Observable, of } from 'rxjs';
 import { Project } from '../data/interface/project.interface';
 import { PROJECTS } from '../data/project.data';
-import {skills} from '../data/skills'
+import { skills } from '../data/skills'
 
 @Injectable({
   providedIn: 'root',
@@ -12,11 +12,17 @@ export class EuclidesService {
     return of(PROJECTS);
   }
 
-  getProjectByTitle(title:string): Observable<Project | null>{
-    return of(PROJECTS.find((project) => project.title === title) || null);
+  getProjectByTitle(title: string): Observable<Project> {
+    const project = PROJECTS.find(project => project.title === title);
+
+    if (!project) {
+      throw new Error(`Project "${title}" not found`);
+    }
+
+    return of(project);
   }
 
-  getSkills(){
+  getSkills() {
     return skills;
   }
 }
