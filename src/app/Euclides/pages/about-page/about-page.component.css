@@ -53,28 +53,21 @@
 }
 
 .ep-hero__button {
+    position: relative;
     padding: 0.7rem 2rem;
-
-    background-color: var(--color-brand-golden-300);
+    background-color: var(--color-brand-golden-400);
     color: var(--color-brand-navy-400);
-
     font-size: 0.75rem;
     letter-spacing: 0.2rem;
     font-weight: 700;
-
     text-decoration: none;
-
     cursor: pointer;
-
-    transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
-    clip-path: var(--clip-path-buttons)
-
+    transition: 500ms background-color ease;
+    border-radius: .2rem;
 }
 
 .ep-hero__button:hover {
-    background-color: var(--color-brand-golden-400);
+    background-color: color-mix(in srgb, var(--color-brand-golden-300) 50%, var(--color-brand-golden-300) 50%);
 }
 
 .ep-colaborate-card {
@@ -128,8 +121,9 @@
 }
 
 .ep-colaborate__buton-contact {
+    position: relative;
     padding: 0.7rem 2rem;
-    clip-path: var(--clip-path-buttons);
+    border-radius: .2rem;
 }
 
 @property --angle {
