@@ -1,6 +1,6 @@
 ﻿import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Project } from '../data/interface/project.interface';
+import { Project, ProjectDetail } from '../data/interface/project.interface';
 import { PROJECTS } from '../data/project.data';
 import { skills } from '../data/skills'
 
@@ -12,7 +12,7 @@ export class EuclidesService {
     return of(PROJECTS);
   }
 
-  getProjectByTitle(title: string): Observable<Project> {
+  getProjectByTitle(title: string): Observable<ProjectDetail> {
     const project = PROJECTS.find(project => project.title === title);
 
     if (!project) {

@@ -1,0 +1,12 @@
+:host{
+    display: block;
+}
+
+.ep-project__overview{
+    display: flex;
+    gap: .5rem;
+}
+.ep-project__overview::before{
+    content: "##";
+    color: var(--color-brand-golden-300);
+}

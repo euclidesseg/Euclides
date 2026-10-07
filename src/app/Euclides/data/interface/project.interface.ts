@@ -1,23 +1,42 @@
-﻿export interface Project {
+﻿// project.interface.ts
+
+/** Versión ligera — para listados, cards, previews */
+export interface Project {
   id: string;
-  state?:string;
-  slug: string;               // Para rutas: /projects/:slug
+  state?: string;
+  slug: string;
   title: string;
   shortDescription: string;
   description: string;
-  aboutDescription:string;
   imageCover: string;
-  imagesDetail: string[];
-  icon?: string;              // Phosphor icon opcional
-
+  icon?: string;
   technologies: string[];
-
+  role: string;
+  year: number;
+  highlights: string[];
   repositoryUrl?: string;
   demoUrl?: string;
-  npm?:string,
+  npm?: string;
+}
 
-  role: string;               // Tu rol en el proyecto
-  year: number;
+/** Versión completa — solo para la página de detalle */
+export interface ProjectDetail extends Project {
+  aboutDescription: string;
+  problem?: string;
+  whatIBuilt?: string;
+  techStack?: TechStackItem[];
+  keyFeatures?: KeyFeature[];
+  results?: string;
+  imagesDetail?: string[];
+  features?: string[];
+}
 
-  highlights: string[];       // Logros clave
+export interface TechStackItem {
+  label: string;  
+  value: string;
+}
+
+export interface KeyFeature {
+  title: string;
+  description: string;
 }

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EuclidesService } from '../../services/euclides.service';
-import { Project } from '../../data/interface/project.interface';
+import { Project, ProjectDetail } from '../../data/interface/project.interface';
 import { Location } from '@angular/common';
 @Component({
   selector: 'app-project-detail',
@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
   styleUrl: './project-detail.component.css'
 })
 
-export default class ProjectDetail implements OnInit {
+export default class ProjectDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProjectbyTitle(this.projectTitle)
@@ -22,7 +22,7 @@ export default class ProjectDetail implements OnInit {
   projectTitle: string = inject(ActivatedRoute).snapshot.params['title'];
 
   isError = signal<string | null>(null);
-  project = signal<Project | null>(null);
+  project = signal<ProjectDetail | null>(null);
 
   getProjectbyTitle(title: string): void {
     this.projectService.getProjectByTitle(title).subscribe({

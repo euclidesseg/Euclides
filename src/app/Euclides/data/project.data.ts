@@ -1,31 +1,45 @@
-﻿import { Project } from './interface/project.interface';
+﻿import { ProjectDetail } from "./interface/project.interface";
 
-export const PROJECTS: Project[] = [
-  {
-    id: '1',
-    state: 'En construcción',
-    slug: 'Plataforma de conocimiento',
-    title: 'Synap',
-    shortDescription: 'Plataforma web tipo blog creada como una idea propia con el fin de que los usuarios puedan compartir artículos, investigaciones o reseñas de libros, películas y series.',
-    description:
-      'Plataforma web tipo blog, diseñada para el intercambio intelectual profundo. Un espacio donde investigadores y creadores comparten artículos, reseñas y hallazgos tecnológicos con una interfaz limpia y centrada en la lectura.',
+export const PROJECTS: ProjectDetail[] = [
 
-    aboutDescription: 'Synap nació como una respuesta a la saturación de contenido efímero en redes sociales. El objetivo principal es crear una plataforma que fomente la reflexión y el análisis técnico o cultural profundo. El desarrollo se centrará en la experiencia de usuario (UX) para escritores, proporcionando un editor personalizado que permite insertar fragmentos de codigo, imageens y texto enriquecido.',
-    imageCover: 'assets/images/projects/synap01.webp',
-    imagesDetail: ['assets/images/projects/synap01.webp', 'assets/images/projects/synap02.webp'],
-    icon: 'ph-shopping-cart',
+{
+  id: '1',
+  state: 'En construcción',
+  slug: 'Plataforma de conocimiento',
+  title: 'Synap',
+  shortDescription: 'Plataforma web tipo blog/revista creada como una idea propia con el fin de que los usuarios puedan compartir artículos, investigaciones o reseñas de libros, películas y series.',
+  description:
+    'Plataforma web tipo blog/revista, pensada y diseñada con el objetivo de que sus usuarios puedan encontrar contenido enriquecedor que aporte a su conocimiento.',
 
-    technologies: ['Angular', 'Java', 'Spring Boot', 'PostgresSQL', 'TypeScript'],
+  // ✅ Versión corta: solo el origen y el propósito
+  aboutDescription:
+    `Synap nació como una idea propia, para mí es una respuesta a la saturación de contenido basura que se encuentra en las redes hoy en día.
+     El objetivo principal es crear una plataforma que fomente la reflexión y el análisis técnico o cultural profundo.`,
 
-    role: 'Ingeniero de Software Full Stack',
-    year: 2026,
+  // ✅ Características: lo estructural y funcional del proyecto
+  features: [
+    'Desarrollo centrado en la experiencia de usuario (UX) para escritores y lectores.',
+    'Estrategia inicial de crecimiento en entornos universitarios y comunidades digitales.',
+    'Punto de encuentro entre estudiantes, profesores, investigadores, profesionales y personas interesadas en compartir conocimiento.',
+    'Espacio personal para desarrollar y publicar mis propios artículos.',
+    'Iniciativa tecnológica y a la vez espacio personal para explorar ideas y contribuir a contenido de mayor profundidad.',
+  ],
 
-    highlights: [
-      'Arquitectura modular y escalable',
-      'Registro de usuarios',
-      'Gestión de roles y permisos',
-    ],
-  },
+  imageCover: 'assets/images/projects/synap01.webp',
+  imagesDetail: ['assets/images/projects/synap01.webp', 'assets/images/projects/synap02.webp'],
+  icon: 'ph-shopping-cart',
+
+  technologies: ['Angular', 'Java', 'Spring Boot', 'PostgresSQL', 'TypeScript'],
+
+  role: 'Ingeniero de Software Full Stack',
+  year: 2026,
+
+  highlights: [
+    'Arquitectura modular y escalable',
+    'Registro de usuarios',
+    'Gestión de roles y permisos',
+  ],
+},
 
   {
     id: '2',
