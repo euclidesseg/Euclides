@@ -20,67 +20,131 @@
                 </span>
                 <div class="h-px bg-brand-slate-400/50 w-full"></div>
             </header>
-            <article class="ep-project__feature w-full max-w-6xl mx-auto">
-                <h2 class="ep-project__overview font-mono lg:text-3xl font-semibold relative mb-4">Descripción general
+            <article class="ep-project__feature w-full max-w-6xl mx-auto leading-relaxed">
+                <h2 id="overview" class="ep-project__overview font-mono lg:text-3xl font-semibold relative mb-4">
+                    Descripción general
                 </h2>
-                <p class="leading-7 text-brand-ivory-300/90">
+                <p class="leading-7 text-brand-ivory-300/90 mb-4">
                     {{project()?.aboutDescription}}
                 </p>
+
+                <figure class="bg-brand-steel-300 p-2 rounded-lg mb-8">
+                    <img [src]="project()?.imageCover" class="rounded-lg min-w-full" alt="portada de proyecto">
+                </figure>
+                <h2 id="properties" class="ep-project__property font-mono lg:text-3xl font-semibold relative mb-4">
+                    Características
+                </h2>
+                @for (feature of project()?.keyFeatures; track feature.title) {
+                <p class="mb-4">
+                    <strong>{{feature.title}}.</strong>
+                    {{feature.description}}
+                </p>
+                }
+                <figure class="bg-brand-steel-200/90 p-2 rounded-lg mb-8 grid grid-cols-2 gap-6 mt-8">
+                    @for (image of project()?.imagesDetail; track $index) {
+                    <img [src]="image" alt="imagen de proyecto, {{$index}}" class="rounded-lg">
+                    }
+                </figure>
+                <h2 id="stack" class="ep-project__stack font-mono lg:text-3xl font-semibold relative mb-4">
+                    Tegnologías
+                </h2>
+                <ul class="ep-project__stack-list list-disc">
+                    @for (skill of project()?.techStack; track $index) {
+                    <li class="text-lg">
+                        <strong class="text-brand-ivory-100">{{skill.label}}:</strong>
+                        <span> {{ skill.value}}</span>
+                    </li>
+                    }
+                </ul>
             </article>
         </div>
 
         <div class="lg:col-span-4 relative">
-            <aside
-                class="lg:fixed z-10000000 top-24 self-start font-space text-[12.5px]"
-                aria-label="Tabla de contenido">
-                <div class="tracking-[0.06em] mb-4 pb-2 border-b"><span
-                        class="">
-                        <span dir="auto" style="vertical-align: inherit;">
-                            <span dir="auto" style="vertical-align: inherit;">##</span>
+            <aside class="lg:fixed top-24 self-start font-space text-[12.5px]" aria-label="Tabla de contenido">
+                @if (project()?.repositoryUrl || project()?.demoUrl || project()?.npm) {
+                <div class="tracking-[0.06em] mb-4 pb-2 border-b border-brand-steel-400/80 flex items-start gap-2">
+                    <span class="text-brand-golden-300">
+                        <span>
+                            <span>##</span>
                         </span>
                     </span>
-                    <span dir="auto" style="vertical-align: inherit;">
-                        <span dir="auto" style="vertical-align: inherit;"> EN ESTA PÁGINA</span>
+                    <span>
+                        <span>ENLACES</span>
                     </span>
                 </div>
-                <ol class="list-none p-0 m-0 flex flex-col gap-0.5">
-                    <li><a href="#overview"
-                            class="block py-1.5 border-l transition-[color,border-color,padding] duration-180 leading-[1.4] hover:text-[var(--text-bright)] hover:border-l-[var(--accent)] pl-3.5 text-[var(--accent)] border-l-[var(--accent)] pl-[18px]">
-                            <span dir="auto" style="vertical-align: inherit;">
-                                <span dir="auto" style="vertical-align: inherit;">Descripción general</span>
-                            </span>
-                        </a></li>
-                    <li><a href="#the-problem"
-                            class="block py-1.5 border-l transition-[color,border-color,padding] duration-180 leading-[1.4] hover:text-[var(--text-bright)] hover:border-l-[var(--accent)] pl-3.5 text-[var(--text-dim)] border-l-[var(--border)]">
-                            <span dir="auto" style="vertical-align: inherit;">
-                                <span dir="auto" style="vertical-align: inherit;">El problema</span>
-                            </span>
-                        </a></li>
-                    <li><a href="#what-i-built"
-                            class="block py-1.5 border-l transition-[color,border-color,padding] duration-180 leading-[1.4] hover:text-[var(--text-bright)] hover:border-l-[var(--accent)] pl-3.5 text-[var(--text-dim)] border-l-[var(--border)]">
-                            <span dir="auto" style="vertical-align: inherit;">
-                                <span dir="auto" style="vertical-align: inherit;">Lo que construí</span>
-                            </span>
-                        </a></li>
-                    <li><a href="#tech-stack"
-                            class="block py-1.5 border-l transition-[color,border-color,padding] duration-180 leading-[1.4] hover:text-[var(--text-bright)] hover:border-l-[var(--accent)] pl-3.5 text-[var(--text-dim)] border-l-[var(--border)]">
-                            <span dir="auto" style="vertical-align: inherit;">
-                                <span dir="auto" style="vertical-align: inherit;">Pila tecnológica</span>
-                            </span>
-                        </a></li>
-                    <li><a href="#key-features"
-                            class="block py-1.5 border-l transition-[color,border-color,padding] duration-180 leading-[1.4] hover:text-[var(--text-bright)] hover:border-l-[var(--accent)] pl-3.5 text-[var(--text-dim)] border-l-[var(--border)]">
-                            <span dir="auto" style="vertical-align: inherit;">
-                                <span dir="auto" style="vertical-align: inherit;">Características principales</span>
-                            </span>
-                        </a></li>
-                    <li><a href="#results--impact"
-                            class="block py-1.5 border-l transition-[color,border-color,padding] duration-180 leading-[1.4] hover:text-[var(--text-bright)] hover:border-l-[var(--accent)] pl-3.5 text-[var(--text-dim)] border-l-[var(--border)]">
-                            <span dir="auto" style="vertical-align: inherit;">
-                                <span dir="auto" style="vertical-align: inherit;">Resultados e impacto</span>
-                            </span>
-                        </a></li>
-                </ol>
+
+                <div class="flex flex-col gap-2">
+                    @if (project()?.repositoryUrl) {
+                    <a [href]="project()?.repositoryUrl" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2.5 px-3.5 py-1.5 border border-brand-steel-400/50
+                                uppercase
+                                text-brand-slate-200 transition-colors duration-200
+                                hover:border-brand-golden-300 hover:text-brand-golden-300">
+                        <!-- Icono GitHub -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974c0 4.406 2.857 8.145 6.821 9.465c.499.09.679-.217.679-.481c0-.237-.008-.865-.011-1.696c-2.775.602-3.361-1.338-3.361-1.338c-.452-1.152-1.107-1.459-1.107-1.459c-.905-.619.069-.605.069-.605c1.002.07 1.527 1.028 1.527 1.028c.89 1.524 2.336 1.084 2.902.829c.091-.645.351-1.085.635-1.334c-2.214-.251-4.542-1.107-4.542-4.93c0-1.087.389-1.979 1.024-2.675c-.101-.253-.446-1.268.099-2.64c0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336a9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021c.545 1.372.203 2.387.099 2.64c.64.696 1.024 1.587 1.024 2.675c0 3.833-2.33 4.675-4.552 4.922c.355.308.675.916.675 1.846c0 1.334-.012 2.41-.012 2.737c0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974C22 6.465 17.535 2 12.026 2"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="tracking-widest">Repositorio</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-3.5 h-3.5 ml-auto shrink-0 opacity-50
+                                        transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                            stroke-linejoin="miter">
+                            <path d="M7 17 17 7M9 7h8v8" />
+                        </svg>
+                    </a>
+                    }
+
+                    @if (project()?.demoUrl) {
+                    <a [href]="project()?.demoUrl" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2.5 px-3.5 py-1.5 border border-brand-steel-400/50
+                                uppercase
+                                text-brand-slate-200 transition-colors duration-200
+                                hover:border-brand-golden-300 hover:text-brand-golden-300">
+                        <!-- Icono enlace externo / demo -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 48 48">
+                            <path d="M0 0h48v48H0z" fill="none" />
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                d="M24.04 42.5c10.215 0 18.46-8.285 18.46-18.54c0-10.215-8.245-18.46-18.46-18.46C13.785 5.5 5.5 13.745 5.5 23.96c0 10.255 8.285 18.54 18.54 18.54m16.012-27.75H7.96m32.195 18.275H7.857M5.6 24h36.8M24.04 5.5v37" />
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                d="M24.02 42.5c5.108 0 9.23-8.285 9.23-18.54c0-10.215-4.122-18.46-9.23-18.46c-5.128 0-9.27 8.245-9.27 18.46c0 10.255 4.142 18.54 9.27 18.54" />
+                        </svg>
+                        <span class="tracking-wider">Demo en vivo</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-3.5 h-3.5 ml-auto shrink-0 opacity-50
+                                        transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                            stroke-linejoin="miter">
+                            <path d="M7 17 17 7M9 7h8v8" />
+                        </svg>
+                    </a>
+                    }
+
+                    @if (project()?.npm) {
+                    <a [href]="project()?.npm" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2.5 px-3.5 py-1.5 border border-brand-steel-400/50
+                                uppercase
+                                text-brand-slate-200 transition-colors duration-200
+                                hover:border-brand-golden-300 hover:text-brand-golden-300">
+                        <!-- Icono paquete / npm -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 16 16">
+                            <path d="M0 0h16v16H0z" fill="none" />
+                            <path fill="currentColor"
+                                d="M1 2.885C1 1.844 1.844 1 2.885 1h10.23C14.156 1 15 1.844 15 2.885v10.23A1.885 1.885 0 0 1 13.115 15H2.885A1.885 1.885 0 0 1 1 13.115zm1.885-.27a.27.27 0 0 0-.27.27v10.23c0 .15.12.27.27.27h5.653v-7a.808.808 0 1 1 1.616 0v7h2.961a.27.27 0 0 0 .27-.27V2.885a.27.27 0 0 0-.27-.27z" />
+                        </svg>
+                        <span class="tracking-wider">Paquete NPM</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-3.5 h-3.5 ml-auto shrink-0 opacity-50
+                                        transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                            stroke-linejoin="miter">
+                            <path d="M7 17 17 7M9 7h8v8" />
+                        </svg>
+                    </a>
+                    }
+                </div>
+                }
+
             </aside>
         </div>
 

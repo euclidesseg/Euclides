@@ -1,12 +1,42 @@
-:host{
+:host {
     display: block;
 }
 
-.ep-project__overview{
+.ep-project__overview {
     display: flex;
     gap: .5rem;
 }
-.ep-project__overview::before{
+
+.project__feature {
+    display: flex;
+    gap: .5rem;
+}
+
+.ep-project__overview::before,
+.ep-project__property::before,
+.ep-project__stack::before {
     content: "##";
     color: var(--color-brand-golden-300);
+}
+
+.ep-project__stack-list {
+    margin-top: .5rem;
+    margin-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.ep-project__stack-list li {
+    margin-top: .4rem;
+    display: list-item;
+    gap: 6px;
+}
+
+.ep-project__stack-list li::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: auto !important;
+    color: var(--color-brand-golden-400);
 }

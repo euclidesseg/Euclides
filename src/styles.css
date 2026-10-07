@@ -135,7 +135,7 @@ app-root::-webkit-scrollbar-thumb {
   border-radius: 4px;
   display: flex;
   justify-content: center;
-  border: 1px solid var(--color-brand-golden-400);
+  border: 1px solid var(--color-brand-golden-300);
 }
 
 html::-webkit-scrollbar-thumb:hover,
@@ -145,7 +145,7 @@ app-root::-webkit-scrollbar-thumb:hover {
 }
 
 body.sidebar-open {
-  overflow: hidden;
+  overflow-y: hidden;
   height: 100%;
 }
 

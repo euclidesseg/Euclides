@@ -10,7 +10,6 @@ export interface Project {
   description: string;
   imageCover: string;
   icon?: string;
-  technologies: string[];
   role: string;
   year: number;
   highlights: string[];
@@ -32,7 +31,7 @@ export interface ProjectDetail extends Project {
 }
 
 export interface TechStackItem {
-  label: string;  
+  label: string;
   value: string;
 }
 
