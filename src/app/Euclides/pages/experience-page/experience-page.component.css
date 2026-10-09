@@ -1,6 +1,17 @@
-.ep-experience__layout{
-    position: relative;
+.ep-experience__layout {
+    /* position: relative; */
 }
+
 .ep-experience__sidebar {
-    position: relative;
+    /* position: relative; */
+}
+
+.ep-experience__option {
+    border: 1px;
+    border-style: solid;
+    border-color: var(--color-brand-steel-300);
+}
+
+.ep-experience__option--active {
+    border-color: color-mix(in srgb, var(--color-brand-golden-300) 40%, var(--color-brand-golden-300) 40%);
 }
