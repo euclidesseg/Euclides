@@ -21,6 +21,7 @@ import { Component, signal } from '@angular/core';
 @Component({
   imports: [],
   templateUrl: './certifications-page.component.html',
+  styleUrl: './certifications-page.component.css'
 })
 
 export default class CertificationsPageComponent {
@@ -29,8 +30,9 @@ export default class CertificationsPageComponent {
   {
     id: 1,
     slug: 'software-engineer-iberoamericana',
-    title: 'Ingeniero de Software',
-    institution: 'Corporación Universitaria Iberoamericana',
+    title: 'Ingenieria de Software',
+    institution: 'C.U Iberoamericana',
+    description:'Me encuentro en fase final de la carrera como ingeniero de software en ella he podido aprender habilidades tenicas y de resolucion de problemas',
     institutionImage:
       'https://pbs.twimg.com/profile_images/1587110309512318977/9mlU0m4Z_400x400.jpg',
 
@@ -51,7 +53,8 @@ export default class CertificationsPageComponent {
     id: 2,
     slug: 'software-development-technician-cesde',
     title: 'Técnico en Desarrollo de Sowftware',
-    institution: 'CESDE',
+    description:'Curse y aprobé estudios correspondientes a Técnico en Desarrollo de software en esta tenicatura obtuve habilides de escritura de codigo, y resolucion de problemas con el lenjuaje Java',
+    institution: 'Cesde',
     institutionImage:
       'https://mir-s3-cdn-cf.behance.net/projects/404/deac98138334863.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png',
 
@@ -73,10 +76,7 @@ export default class CertificationsPageComponent {
       'React',
       'Angular'
     ],
-
-    credentialUrl:
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-898c3.appspot.com/o/certificado-cesde.pdf?alt=media&token=bba58de4-69d0-4dde-a572-44a071ff7945',
-
+  
     year: 2023
   },
 
@@ -85,6 +85,7 @@ export default class CertificationsPageComponent {
     slug: 'spring-boot-microservices-coursera',
     title:
       'Building Scalable Java Microservices with Spring Boot and Spring Cloud',
+      description:'En esta certificación de coursera pude aprender como deslegar apliaciones usando GCP, aprendi a utilizar la consola Cloud Shell además de la implementación de microservicios con Spring Boot',
     institution: 'Coursera',
     institutionImage:
       'https://cdn6.aptoide.com/imgs/1/6/9/169eb96640029c9984161f09c34f7109_icon.png',
@@ -113,6 +114,7 @@ export default class CertificationsPageComponent {
     id: 4,
     slug: 'introduction-to-git-and-github',
     title: 'Introducctión to Git and GitHub',
+    description:'Logré terminar con eficiencia esta certificacion y al final pude ser capaz de trabajar en equipos de desarrollo versionando los proyectos en git e implementando un flujo de Git Flow',
     institution: 'Coursera',
     institutionImage:
       'https://cdn6.aptoide.com/imgs/1/6/9/169eb96640029c9984161f09c34f7109_icon.png',
@@ -137,6 +139,7 @@ export default class CertificationsPageComponent {
     id: 5,
     slug: 'crash-course-on-python',
     title: 'Crash Course on Python',
+    description:'Gracias a este curso pude comprender los fundamentos del lenguaje Python gracias a esto aprendi a configuar entornos virtuales y a desarrollar utilizando Spyder',
     institution: 'Coursera',
     institutionImage:
       'https://cdn6.aptoide.com/imgs/1/6/9/169eb96640029c9984161f09c34f7109_icon.png',
@@ -144,7 +147,7 @@ export default class CertificationsPageComponent {
     startDate: 'Abril 2023',
     endDate: 'Junio 2023',
 
-    skills: [
+    skills: [ 
       'Python',
       'Spyder',
       'Algoritmos',
@@ -161,6 +164,7 @@ export default class CertificationsPageComponent {
     id: 6,
     slug: 'introduccion-html5',
     title: 'Introducción al HTML5',
+    description:'Esta certificación me ayudo a comprener y escribir codigo html cemantica siguiendo las bases dispuestas por W3SChools',
     institution: 'Coursera',
     institutionImage:
       'https://cdn6.aptoide.com/imgs/1/6/9/169eb96640029c9984161f09c34f7109_icon.png',
@@ -185,9 +189,10 @@ export default class CertificationsPageComponent {
     id: 7,
     slug: 'diploma-java-programming',
     title: 'Diploma de Programacion en Java',
+    description:'Gracias a este diplomado complementé los conocimientos que ya tenia como base desde el estudio de los estudios técnicos, logrando comprender a profundidadad entre ellos la POO',
     institution: 'Politécnico de Colombia',
     institutionImage:
-      'https://yt3.googleusercontent.com/ytc/APkrFKakoq7Kf1x0mIV7rAQnr7A4jOGVqRTxPwKKyi--=s900-c-k-c0x00ffffff-no-rj',
+      'https://politecnicoaltonivel.edu.co/contable/app/certificados/pages/certificado.php?Id=gkJeQblDe9N23DxYLMw8',
 
     startDate: 'Enero 2022',
     endDate: 'Febrero 2022',

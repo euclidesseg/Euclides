@@ -33,7 +33,7 @@
           class="ep-skills__filters w-full mr-0 flex items-center flex-wrap justify-start md:justify-end gap-1.5 p-2 border border-brand-golden-200/5 rounded-lg px-2 lg:px-8">
           @for (option of filterOptions; track option.value) {
           <button
-            class="px-2 py-1.5 border border-brand-golden-200/5 rounded-lg text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter"
+            class="px-2 py-1.5 border border-brand-golden-200/5 rounded-md text-brand-golden-100 transition-colors duration-500 bg-brand-golden-300/5 hover:bg-brand-golden-300 hover:text-brand-navy-400 cursor-pointer font-inter"
             [class.bg-brand-golden-300!]="filter() === option.value"
             [class.text-brand-navy-400]="filter() === option.value" [class.font-semibold]="filter() === option.value"
             (click)="changeFilter(option.value)">
