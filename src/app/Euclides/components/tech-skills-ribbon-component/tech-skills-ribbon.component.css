@@ -51,7 +51,6 @@
 .ep-ribbon__track__item {
   display: flex;
   align-items: center;
-  border: 1px solid color-mix(in srgb, var() percentage, color percentage);
   gap: .5rem;
   pad: 0 40px;
   color: var(--color-brand-golden-300);
