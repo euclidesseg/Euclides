@@ -1,6 +1,9 @@
 .ep-contacts__btn-folow-github,
 .ep-contact__btn-contact-linkedin {
-    clip-path: var(--clip-path-buttons);
+   color: var(--color-brand-navy-300);
+   transition: 500ms border;
+   border-radius: .4rem;
+   background-color: var(--color-brand-golden-300);
 }
 
 .wrapper {

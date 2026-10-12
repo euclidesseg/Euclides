@@ -7,5 +7,4 @@ export interface Experience {
   description: string[];
   skills: string[];
   companyImage?: string;
-  icon: 'panel' | 'palette' | 'code';
 }

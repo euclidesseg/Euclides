@@ -1,7 +1,22 @@
 :host {
   display: block;
 }
+.ep-footer::before{
+  content: 'EUCLIDES';
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right: 0;
+  color: color-mix(in srgb, var(--color-brand-golden-400) 30%, var(--color-brand-golden-400) 30%);
+  opacity: 0.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12rem;
+  font-family: var(--font-nevera);
+  letter-spacing: 3rem;
 
+}
 footer {
   background-image:
     linear-gradient(to right, color-mix(in srgb, var(--color-brand-steel-300) 5%, var(--color-brand-steel-300) 5%) 1px, transparent 1px),

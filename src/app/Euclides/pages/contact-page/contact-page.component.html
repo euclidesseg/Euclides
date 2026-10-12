@@ -4,9 +4,9 @@
             <!-- Overline + Line -->
             <div class="flex items-center gap-4">
                 <span class="font-code text-brand-golden-300 text-sm md:text-base tracking-[0.2em] uppercase">
-                06 / Contacto
+                07 / Contacto
                 </span>
-                <div class="h-px flex-1 bg-brand-golden-100/10"></div>
+                <div class="h-px flex-1 bg-brand-steel-300/50"></div>
             </div>
 
             <!-- Main Title -->
@@ -22,19 +22,34 @@
         </div>
         <section class="w-full flex flex-col md:grid md:grid-cols-12 gap-4">
             <div class="md:col-span-5 lg:col-span-3 uppercase flex flex-col lg:justify-between gap-4">
-                <div class="relative px-2 py-6 rounded-md mb-16 lg:mb-0">
-                    <div class="border-t-3 border-l-3 border-brand-golden-200 h-4 w-4 absolute z-9 top-0 left-0">
+                <div class="relative px-2 py-6 rounded-md mb-16 lg:mb-0 flex items-center justify-center">
+                    <a href="https://www.youtube.com/@euclidesperez699" target="_blank" class="absolute inset-0"></a>
+                    <div class="border-t border-l border-brand-golden-200 h-4 w-4 absolute z-9 top-0 left-0">
                     </div>
-                    <div class="border-t-3 border-r-3 border-brand-golden-200 h-4 w-4 absolute z-9 top-0 right-0">
+                    <div class="border-t border-r border-brand-golden-200 h-4 w-4 absolute z-9 top-0 right-0">
                     </div>
-                    <div class="border-b-3 border-l-3 border-brand-golden-200 h-4 w-4 absolute z-9 bottom-0 left-0">
+                    <div class="border-b border-l border-brand-golden-200 h-4 w-4 absolute z-9 bottom-0 left-0">
                     </div>
-                    <div class="border-b-3 border-r-3 border-brand-golden-200 h-4 w-4 absolute z-9 bottom-0 right-0">
+                    <div class="border-b border-r border-brand-golden-200 h-4 w-4 absolute z-9 bottom-0 right-0">
                     </div>
-                    <span
-                        class="text-center text-brand-golden-100 font-space font-bold block tracking-widest text-3xl sm:text-4xl md:text-3xl lg:text-2xl">Contactemos</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-8 text-brand-golden-300" viewBox="0 0 48 48">
+                            <path d="M0 0h48v48H0z" fill="none" />
+                            <defs>
+                                <mask id="SVGLjBCKdWb">
+                                    <g fill="none" stroke-linejoin="round">
+                                        <path fill="#fff" stroke="#fff" stroke-width="4"
+                                            d="M11.064 10.414Q19.378 10 23.998 10t12.939.415a6 6 0 0 1 5.68 5.492q.381 4.55.381 8.017q0 3.508-.39 8.128a6 6 0 0 1-5.587 5.483Q29.91 38 23.998 38q-5.91 0-13.018-.465a6 6 0 0 1-5.587-5.48q-.395-4.655-.395-8.131q0-3.435.385-8.02a6 6 0 0 1 5.68-5.49Z" />
+                                        <path fill="#000" stroke="#000" stroke-width="3.429"
+                                            d="M21 19.61v8.796a.857.857 0 0 0 1.33.715l6.597-4.36a.857.857 0 0 0 .006-1.427l-6.598-4.436a.857.857 0 0 0-1.335.711Z" />
+                                    </g>
+                                </mask>
+                            </defs>
+                            <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#SVGLjBCKdWb)" />
+                        </svg>
+
+                        <span class="font-bold text-brand-golden-100">YouTube</span>
                 </div>
-                <div class="bg-brand-navy-400/90 border border-brand-golden-300/20 py-6 rounded-lg">
+                <div class="bg-brand-navy-400/90 border border-brand-steel-300/40 py-6 rounded-lg">
                     <div>
                         <div
                             class="relative z-19 flex flex-col items-center pt-5 px-4 font-space text-brand-golden-300">
@@ -67,7 +82,7 @@
                 <div class="flex flex-col lg:grid lg:grid-cols-12 gap-4">
                     <div class="lg:col-span-7 flex flex-col items-center justify-start gap-4">
                         <div
-                            class="ep-contacts__email bg-brand-navy-400/90 py-6 text-brand-golden-300 w-full font-bold border border-brand-golden-300/20 flex items-center justify-center gap-6 rounded-lg">
+                            class="ep-contacts__email bg-brand-navy-400/90 py-6 text-brand-golden-300 w-full font-bold border border-brand-steel-300/40 flex items-center justify-center gap-6 rounded-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 16 16">
                                 <path d="M0 0h16v16H0z" fill="none" />
                                 <path fill="currentColor"
@@ -77,7 +92,7 @@
                                 class="block text-sm sm:text-lg md:text-xl text-center text-brand-golden-100 font-space">euclides2696@gmail.com
                             </span>
                             <button type="button" (click)="copyEmail()"
-                                class="shadow-md shadow-brand-navy-300 border p-3 rounded-lg border-brand-golden-300/20 cursor-pointer">
+                                class="shadow-md shadow-brand-navy-300 border p-3 rounded-lg border-brand-steel-300/40 cursor-pointer">
 
                                 @if (!copied()) {
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 32 32">
@@ -96,7 +111,7 @@
                             </button>
                         </div>
                         <div
-                            class="ep-contacts__github bg-brand-navy-400/90 text-brand-golden-300 w-full min-h-16 py-4 border border-brand-golden-300/20 rounded-lg">
+                            class="ep-contacts__github bg-brand-navy-400/90 text-brand-golden-300 w-full min-h-16 py-4 border border-brand-steel-300/40 rounded-lg">
                             <div class="relative z-10 flex items-center justify-between px-2 shrink-0">
                                 <div class="flex items-center gap-3">
                                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img"
@@ -112,7 +127,7 @@
                                     </div>
                                 </div>
                                 <a href="https://github.com/euclidesseg"
-                                    class="ep-contacts__btn-folow-github md:block bg-brand-golden-200 text-brand-navy-400">
+                                    class="ep-contacts__btn-folow-github md:block">
                                     <div class="items-center justify-center gap-1.5 px-4 py-1.5 text-[14px] font-bold transition-all duration-500"
                                         aria-label="Sígueme en GitHub">
                                         <span>
@@ -222,7 +237,7 @@
                     </div>
                     <div class="lg:col-span-5 flex gap-4 flex-col">
                         <div
-                            class="ep-contacts__linkedin relative border text-brand-golden-200 border-brand-golden-300/20 flex flex-col justify-between h-full p-6 bg-brand-navy-400/90 rounded-lg">
+                            class="ep-contacts__linkedin relative border text-brand-golden-200 border-brand-steel-300/40 flex flex-col justify-between h-full p-6 bg-brand-navy-400/90 rounded-lg">
                             <div class="">
                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512"
                                     class="text-[50px] md:text-[50px]" height="1em" width="1em"
@@ -234,20 +249,20 @@
                             </div>
                             <div class="flex flex-col items-start gap-8 mt-auto pt-10 w-full">
                                 <div
-                                    class="cursor-target rounded-lg border border-brand-golden-300/20 p-2 text-[90%] md:text-[75%] font-medium transition-all duration-500 active:scale-95 tracking-widest text-center whitespace-nowrap truncate max-w-full">
+                                    class="cursor-target rounded-lg border border-brand-steel-300/40 p-2 text-[90%] md:text-[75%] font-medium transition-all duration-500 active:scale-95 tracking-widest text-center whitespace-nowrap truncate max-w-full">
                                     <span class="text-brand-golden-100">
                                         https://www.linkedin.com/in/e-perez-in/
                                     </span>
                                 </div>
                                 <a href="https://www.linkedin.com/in/e-perez-in/"
-                                    class="ep-contact__btn-contact-linkedin bg-brand-golden-200 text-brand-navy-400 shrink-0 px-3 py-1.5 text-[15px] font-bold transition-all duration-500 active:scale-95">
+                                    class="ep-contact__btn-contact-linkedin shrink-0 px-3 py-1.5 text-[15px] font-bold transition-all duration-500 active:scale-95">
                                     <span>
                                         <span>Conectar</span>
                                     </span>
                                 </a>
                             </div>
                         </div>
-                        <a class="ep-contacts__letcode bg-brand-navy-400/90 z-99 rounded-lg border border-brand-golden-300/20 text-brand-golden-200 relative flex flex-col items-start gap-8 h-full p-6 md:p-4"
+                        <a class="ep-contacts__letcode bg-brand-navy-400/90 z-99 rounded-lg border border-brand-steel-300/40 text-brand-golden-200 relative flex flex-col items-start gap-8 h-full p-6 md:p-4"
                             href="https://leetcode.com/u/euclidesseg/" target="_blank">
                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="60"
                                 height="60" class="" aria-label="LeetCode">
@@ -256,7 +271,7 @@
                                     fill="currentColor">
                                 </path>
                             </svg>
-                            <div class="cursor-target px-2 w-full bg-brand-navy-400 block text-brand-golden-100 border border-brand-golden-300/20 whitespace-nowrap truncate py-2 text-[18px] md:text-[15px] font-medium transition-all duration-500 active:scale-95 tracking-widest rounded-lg"
+                            <div class="cursor-target px-2 w-full bg-brand-navy-400 block text-brand-golden-100 border border-brand-steel-300/40 whitespace-nowrap truncate py-2 text-[18px] md:text-[15px] font-medium transition-all duration-500 active:scale-95 tracking-widest rounded-lg"
                                 aria-label="Perfil de LeetCode euclidesseg">
                                 <span>
                                     https://leetcode.com/u/euclidesseg/
@@ -268,35 +283,20 @@
                 </div>
                 <div class="w-full flex flex-col lg:flex-row gap-6 text-brand-golden-300">
                     <div
-                        class="ep-contacts__youtube relative text-brand-golden-300 flex items-center py-8 justify-center gap-4 text-[25px] font-space px-4">
-                        <div class="border-t-3 border-l-3 border-brand-golden-200 h-4 w-4 absolute z-9 top-0 left-0">
+                        class="ep-contacts__youtube relative text-brand-golden-300 flex items-center py-2 justify-center gap-4 text-[25px] font-space px-4">
+                        <div class="border-t border-l border-brand-golden-200 h-4 w-4 absolute z-9 top-0 left-0">
                         </div>
-                        <div class="border-t-3 border-r-3 border-brand-golden-200 h-4 w-4 absolute z-9 top-0 right-0">
+                        <div class="border-t border-r border-brand-golden-200 h-4 w-4 absolute z-9 top-0 right-0">
                         </div>
-                        <div class="border-b-3 border-l-3 border-brand-golden-200 h-4 w-4 absolute z-9 bottom-0 left-0">
+                        <div class="border-b border-l border-brand-golden-200 h-4 w-4 absolute z-9 bottom-0 left-0">
                         </div>
                         <div
-                            class="border-b-3 border-r-3 border-brand-golden-200 h-4 w-4 absolute z-9 bottom-0 right-0">
+                            class="border-b border-r border-brand-golden-200 h-4 w-4 absolute z-9 bottom-0 right-0">
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" viewBox="0 0 48 48">
-                            <path d="M0 0h48v48H0z" fill="none" />
-                            <defs>
-                                <mask id="SVGLjBCKdWb">
-                                    <g fill="none" stroke-linejoin="round">
-                                        <path fill="#fff" stroke="#fff" stroke-width="4"
-                                            d="M11.064 10.414Q19.378 10 23.998 10t12.939.415a6 6 0 0 1 5.68 5.492q.381 4.55.381 8.017q0 3.508-.39 8.128a6 6 0 0 1-5.587 5.483Q29.91 38 23.998 38q-5.91 0-13.018-.465a6 6 0 0 1-5.587-5.48q-.395-4.655-.395-8.131q0-3.435.385-8.02a6 6 0 0 1 5.68-5.49Z" />
-                                        <path fill="#000" stroke="#000" stroke-width="3.429"
-                                            d="M21 19.61v8.796a.857.857 0 0 0 1.33.715l6.597-4.36a.857.857 0 0 0 .006-1.427l-6.598-4.436a.857.857 0 0 0-1.335.711Z" />
-                                    </g>
-                                </mask>
-                            </defs>
-                            <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#SVGLjBCKdWb)" />
-                        </svg>
-
-                        <span class="font-bold text-brand-golden-100">YouTube</span>
+                        <img src="assets/images/EP.svg" alt="">
                     </div>
                     <div
-                        class="bg-brand-navy-400/90 text-brand-golden-100 relative flex items-center lg:flex-row justify-center rounded-lg border border-brand-golden-300/20 py-4 px-6 md:px-10">
+                        class="bg-brand-navy-400/90 text-brand-golden-100 relative flex items-center lg:flex-row justify-center rounded-lg border border-brand-steel-300/40 py-4 px-6 md:px-10">
                         <p
                             class="font-space font-bold relative z-10 tracking-wide text-center text-3xl md:text-2xl lg:text-3xl ">
                             <span>

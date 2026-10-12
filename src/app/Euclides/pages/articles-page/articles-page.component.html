@@ -1,88 +1,79 @@
-<section class="max-w-6xl mx-auto py-4">
-    <div class="mb-12">
-        <div class="flex items-center gap-2 mb-4">
-            <span class="w-12 h-1 bg-brand-main rounded-full"></span>
-            <span class="text-brand-main font-bold tracking-widest uppercase text-xl">Otra parte de lo que hago</span>
-        </div>
-        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
-            Últimos <span class="text-brand-main">Artículos</span>
-        </h2>
-        <p class="text-slate-600 max-w-2xl text-lg">
-            Exploro temas de ingeniería de software, las últimas tendencias tecnológicas y otros temas cómo lectura, y ciencia. Compertiré mis reflecciones y guias técnicas en mi propio block.
-        </p>
+<section class="ep-articles w-full px-6 md:px-10 lg:px-14 pt-16 font-space min-h-screen">
+  <div class="max-w-6xl mx-auto py-16">
+
+    <!-- Header -->
+    <div class="ep-articles__header flex flex-col gap-4 mb-16 lg:mt-4 relative">
+      <div class="flex items-center gap-4">
+        <span class="font-code text-brand-golden-300 text-sm md:text-base tracking-[0.2em] uppercase">
+          06 / Artículos
+        </span>
+        <div class="h-px flex-1 bg-brand-steel-300/50"></div>
+      </div>
+
+      <h2
+        class="ep-projects__title font-space font-bold text-3xl md:text-5xl lg:text-6xl text-brand-ivory-200 tracking-tight">
+       Ideas y reflexiones que me gusta compartir.
+      </h2>
+
+      <p
+        class="ep-projects__description font-space max-w-2xl text-sm md:text-lg lg:text-xl text-brand-slate-200 leading-relaxed">
+        Una sección en la que encontrarás algunas de las ideas y reflexiones que escribo y que valen la pena compartir.
+      </p>
     </div>
 
-    <!-- Grid de Artículos -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Card 1 -->
-        @for (article of articles(); track article.id) {
+    <div class="ep-articles__grid grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @for(article of articles(); track $index) {
+          <article class="ep-article group flex flex-col bg-brand-navy-300 border border-brand-steel-300 rounded-lg hover:border-brand-golden-300/30 transition-colors duration-500">
+            <div class="flex flex-col flex-1 p-5">
+               <span class="inline-fit rounded-full top-3 left-4 text-xs font-mono text-brand-golden-300 uppercase mb-4 py-1 px-2 bg-brand-golden-100/2 border border-brand-steel-300">
+                {{ article.category }}
+              </span>
+              <p class="text-xs font-mono text-brand-slate-300 mb-4">
+                {{ article.publishedAt }} · {{ article.readTime }} MIN LECTURA
+              </p>
 
-            <article  class="blog-card bg-white rounded-2xl overflow-hidden flex flex-col shadow-md transition duration-500 transform hover:shadow-xl hover:-translate-y-2 hover:border-[0.1px] hover:border-brand-main">
+              <h3 class="text-xl font-semibold text-brand-ivory-200 leading-snug mb-3 group-hover:text-brand-golden-300 transition-colors">
+                {{ article.title }}
+              </h3>
 
-                <!-- Header -->
-                <div class="h-48 bg-slate-200 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-brand-main opacity-10 flex items-center justify-center">
-                    <svg class="w-16 h-16 text-brand-main" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4">
-                        </path>
-                    </svg>
-                    </div>
+              <p class="text-sm text-brand-slate-200 leading-relaxed mb-6 line-clamp-4">
+                {{ article.excerpt }}
+              </p>
 
-                    <div class="absolute top-4 left-4">
-                    <span
-                        class="tag text-brand-main bg-brand-main/20 rounded-full py-1 px-3 text-[0.7rem] font-semibold uppercase">
-                        {{ article.category }}
-                    </span>
-                    </div>
-                </div>
-
-                <!-- Body -->
-                <div class="p-6 grow">
-                    <time class="text-xs text-slate-500 font-medium mb-2 block uppercase tracking-wider">
-                    {{ article.publishedAt }} • {{ article.readTime }} min lectura
-                    </time>
-
-                    <h3
-                    class="text-xl font-bold text-slate-900 mb-3 leading-tight hover:text-brand-main transition-colors cursor-pointer">
-                    {{ article.title }}
-                    </h3>
-
-                    <p class="text-slate-600 text-sm mb-6 line-clamp-3">
-                    {{ article.excerpt }}
-                    </p>
-                </div>
-
-                <!-- Footer -->
-                <div class="p-6 pt-0">
-                    <a
-                    [href]="article.articleUrl"
-                    target="_blank"
-                    rel="noopener"
-                    class="bg-brand-main text-white inline-flex items-center px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:bg-brand-main/80">
-
-                    Leer artículo
-
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3">
-                        </path>
-                    </svg>
-                    </a>
-                </div>
-
-            </article>
-
+              <a
+                [href]="article.articleUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-auto pt-4 border-t border-brand-steel-400 flex justify-end gap-4 items-center text-sm text-brand-ivory-300 hover:text-brand-golden-300 transition-colors"
+              >
+                <span>Leer artículo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-3" viewBox="0 0 16 16">
+                  <path d="M0 0h16v16H0z" fill="none" />
+                  <path fill="currentColor" fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                </svg>
+              </a>
+            </div>
+          </article>
         }
-
+        
     </div>
 
-    <!-- Footer de la sección -->
-    <div class="mt-16 text-center">
-        <a href="#" class="inline-flex items-center text-slate-900 font-bold hover:text-brand-main transition-colors group">
-            Ver todas las publicaciones
-            <span class="ml-2 transform group-hover:translateX(4px) transition-transform">→</span>
-        </a>
+    <div class="mt-10 pt-6 border-t border-brand-steel-300/50 flex justify-between items-center gap-4">
+      <span class="text-xs font-mono tracking-wider text-brand-slate-300">
+        CONOCIMIENTO · EXPERIENCIA · EVOLUCIÓN
+      </span>
+
+      <a href="https://medium.com/" target="_blank" rel="noopener noreferrer"
+         class="flex items-center justify-end gap-4 text-sm border border-brand-steel-300/50 px-4 py-2 text-brand-golden-300/50 hover:border-brand-golden-300/50 hover:text-brand-golden-300 transition-colors duration-500">
+        <span>
+          Ver publicaciones
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-3" viewBox="0 0 24 24">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3 12.013L20.789 12m-6.776 7L21 12l-6.988-7" />
+        </svg>
+      </a>
     </div>
+
+  </div>
 </section>

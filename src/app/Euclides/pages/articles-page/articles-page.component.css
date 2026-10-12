@@ -1,0 +1,28 @@
+:host{
+    display: block;
+}
+.ep-article{
+    position: relative;
+    overflow: hidden;
+}
+.ep-article::before{
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -180%;
+    background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(232, 225, 217, 0.089),
+      transparent);
+    z-index: 5;
+    opacity: 0.8;
+    width: 150%;
+    height: 300%;
+    transform: rotate(25deg);
+    transition: 800ms left;
+
+}
+.ep-article:hover::before{
+    left: 180%;
+}

@@ -5,7 +5,6 @@ import { Experience } from '../../data/interface/experience.interface';
 
 @Component({
   selector: 'app-experience-page',
-  imports: [],
   templateUrl: './experience-page.component.html',
   styleUrl:'./experience-page.component.css'
 })
@@ -17,7 +16,6 @@ export default class ExperiencePageComponent {
       role: 'Desarrollador',
       startDate: '20-09-2023',
       endDate: 'Actualidad',
-      icon: 'panel',
       companyImage: '',
       description: [
         'Desarrollo e implementación de mejoras en la visualización de documentos públicos para diferentes clientes gubernamentales, optimizando la experiencia de usuario.',
@@ -33,7 +31,6 @@ export default class ExperiencePageComponent {
       role: 'Desarrollador JR',
       startDate: '16-06-2023',
       endDate: '19-09-2023',
-      icon: 'code',
       description: [
         'Colaboración directa con el equipo de desarrollo para analizar los requerimientos de los clientes.',
         'Desarrollo de funcionalidades a partir de especificaciones técnicas.',
@@ -48,7 +45,6 @@ export default class ExperiencePageComponent {
       role: 'Ingeniero de Prácticas',
       startDate: '16-12-2022',
       endDate: '15-06-2023',
-      icon: 'palette',
       description: [
         'Corrección de errores e implementación de funcionalidades en el frontend.',
         'Construcción de interfaces dinámicas utilizando Angular y PrimeNG.',
@@ -63,7 +59,6 @@ export default class ExperiencePageComponent {
       role: 'Técnico de Sistemas',
       startDate: '12-02-2022',
       endDate: '15-12-2022',
-      icon: 'panel',
       description: [
         'Soporte técnico al sistema de gestión de ventas.',
         'Administración y gestión de bases de datos SQL.',
@@ -77,9 +72,7 @@ export default class ExperiencePageComponent {
   selectedExperienceId = signal<number>(1);
 
   selectedExperience = computed(() =>
-     this.experiences().find(
-        experience => experience.id === this.selectedExperienceId(),
-      ) ?? this.experiences()[0],
+     this.experiences().find(experience => experience.id === this.selectedExperienceId()) ?? this.experiences()[0],
   );
 
   selectExperience(id: number): void {
