@@ -15,7 +15,7 @@
   font-size: 12rem;
   font-family: var(--font-nevera);
   letter-spacing: 3rem;
-
+  z-index: -1;
 }
 footer {
   background-image:

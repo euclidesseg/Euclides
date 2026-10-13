@@ -29,7 +29,7 @@
                 </p>
 
                 <figure class="bg-brand-steel-300 p-2 rounded-lg mb-8">
-                    <img [src]="project()?.imageCover" class="rounded-lg min-w-full" alt="portada de proyecto">
+                    <img [src]="project()?.imageCover" class="rounded-lg min-w-full" alt="portada de proyecto" fetchpriority="high">
                 </figure>
                 <h2 id="properties" class="ep-project__property font-mono lg:text-3xl font-semibold relative mb-4">
                     Características
@@ -42,7 +42,7 @@
                 }
                 <figure class="bg-brand-steel-200/90 p-2 rounded-lg mb-8 grid grid-cols-2 gap-6 mt-8">
                     @for (image of project()?.imagesDetail; track $index) {
-                    <img [src]="image" alt="imagen de proyecto, {{$index}}" class="rounded-lg">
+                    <img [src]="image" alt="imagen de proyecto, {{$index}}" class="rounded-lg" loading="lazy">
                     }
                 </figure>
                 <h2 id="stack" class="ep-project__stack font-mono lg:text-3xl font-semibold relative mb-4">

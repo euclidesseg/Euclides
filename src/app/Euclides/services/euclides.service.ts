@@ -12,11 +12,11 @@ export class EuclidesService {
     return of(PROJECTS);
   }
 
-  getProjectByTitle(title: string): Observable<ProjectDetail> {
-    const project = PROJECTS.find(project => project.title === title);
+  getProjectBySlug(slug: string): Observable<ProjectDetail> {
+    const project = PROJECTS.find(project => project.slug === slug);
 
     if (!project) {
-      throw new Error(`Project "${title}" not found`);
+      throw new Error(`Project "${slug}" not found`);
     }
 
     return of(project);

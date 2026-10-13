@@ -4,7 +4,7 @@ export const PROJECTS: ProjectDetail[] = [
   {
     id: '1',
     state: 'En construcción',
-    slug: 'plataforma de conocimiento',
+    slug: 'synap',
     title: 'Synap',
     shortDescription: 'Plataforma web tipo blog/revista creada como una iniciativa propia para compartir artículos, investigaciones y reseñas de libros, películas y series.',
     description: 'Plataforma web tipo blog/revista pensada para ofrecer un espacio donde estudiantes, profesores, investigadores, profesionales y personas interesadas puedan compartir y descubrir contenido que aporte conocimiento y fomente la reflexión.',
@@ -39,7 +39,7 @@ export const PROJECTS: ProjectDetail[] = [
   {
     id: '2',
     state: 'Publicado',
-    slug: 'editor de texto',
+    slug: 'euclides-editor',
     title: 'Euclides Editor',
     shortDescription: 'Editor de texto enriquecido basado en ProseMirror, diseñado para integrarse de forma nativa en aplicaciones Angular.',
     description: 'Librería de editor de texto enriquecido construida sobre ProseMirror y desarrollada como una solución flexible y extensible para aplicaciones Angular. Permite crear contenido estructurado con soporte para texto enriquecido, bloques de código, imágenes y otras funcionalidades de edición.',

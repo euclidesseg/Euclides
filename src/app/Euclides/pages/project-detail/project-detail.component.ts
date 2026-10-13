@@ -13,7 +13,7 @@ import { Location } from '@angular/common';
 export default class ProjectDetailComponent implements OnInit {
 
   ngOnInit(): void {
-    this.getProjectbyTitle(this.projectTitle)
+    this.getProjectbySlug(this.projectTitle)
   }
 
 
@@ -24,8 +24,8 @@ export default class ProjectDetailComponent implements OnInit {
   isError = signal<string | null>(null);
   project = signal<ProjectDetail | null>(null);
 
-  getProjectbyTitle(title: string): void {
-    this.projectService.getProjectByTitle(title).subscribe({
+  getProjectbySlug(slug: string): void {
+    this.projectService.getProjectBySlug(slug).subscribe({
       next: (project) => {
         this.project.set(project)!;
       },

@@ -76,15 +76,17 @@
 }
 .ep-contacts__letcode {
     overflow: hidden;
+    position: relative;
+    isolation: isolate;
 }
 
-.ep-contacts__letcode::before {
+.ep-contacts__letcode::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 0;
 
-    background-image: url("/assets/images/matriz.jpg");
+    background-image: url("/assets/images/matriz.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
