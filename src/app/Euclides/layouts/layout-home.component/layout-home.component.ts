@@ -39,7 +39,7 @@ export class LayoutHomeComponent {
     })
   }
   sidebarOpen = signal(false);
-  sidebarManuallyClosed = signal<boolean>(false);
+  sidebarManuallyClosed = signal<boolean>(true);
 
   routes = this.navigationService.routes;
 
