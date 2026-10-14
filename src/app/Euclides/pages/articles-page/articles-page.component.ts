@@ -23,6 +23,18 @@ export interface ArticlePreview {
 export default class ArticlesPageComponent {
   readonly articles = signal<ArticlePreview[]>([
     {
+      id: 1,
+      slug: 'creando-api-spring-boot',
+      title: 'Creando API con Spring Boot',
+      excerpt:
+        'Guía práctica para desarrollar una API REST con Spring Boot, Java 17 y Spring Data JPA, desde la configuración inicial del proyecto y la conexión a una base de datos relacional hasta la implementación de entidades, repositorios, servicios y controladores.',
+      category: 'Desarrollo backend',
+      readTime: 8,
+      publishedAt: '09 Jul 2023',
+      articleUrl:
+        'https://www.linkedin.com/pulse/creando-api-con-spring-boot-euclides-perez/',
+    },
+    {
       id: 2,
       slug: 'el-fin-de-las-ideas-creatividad',
       title:
