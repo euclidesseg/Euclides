@@ -18,7 +18,7 @@ export class SidebarComponent {
 
   changeSidebar = output();
 
-  toggleSidebar(){
+  toggleSidebar() {
     this.changeSidebar.emit();
   }
 }

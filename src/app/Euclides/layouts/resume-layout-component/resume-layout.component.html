@@ -1,0 +1,172 @@
+<div class="resume-page-wrapper">
+
+    <!-- Barra superior de herramientas -->
+    <header class="resume-toolbar">
+        <a href="/euclides/about" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+            Volver al portafolio
+        </a>
+
+        <button (click)="printCv()" class="print-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            Descargar PDF
+        </button>
+    </header>
+
+    <!-- Contenedor del CV -->
+    <main class="resume-content">
+        <div class="ep-cv" #cvContainer>
+            <div class="ep-cv__scaler">
+                <div class="resume">
+
+                    <header>
+                        <h1>EUCLIDES PÉREZ FERNÁNDEZ</h1>
+                        <div class="headline">Desarrollador de Software | Java · Spring Boot · Angular</div>
+                        <div class="contact">
+                            Medellín, Colombia · <a href="tel:+573122349449">+57 312 234 9449</a> · <a
+                                href="mailto:euclides2696@gmail.com">euclides2696@gmail.com</a><br>
+                            <a href="https://github.com/euclidesseg">GitHub</a> · <a
+                                href="https://www.linkedin.com/in/e-perez-in/">LinkedIn</a> · <a
+                                href="https://euclides-dev.netlify.app/euclides/about">Portafolio</a>
+                        </div>
+                    </header>
+
+                    <section>
+                        <h2 class="section-title">Perfil profesional</h2>
+                        <p>Desarrollador de software con más de 4 años de experiencia creando aplicaciones web para los
+                            sectores público y privado. En mi trayectoria como desarrollador de software he adquirido
+                            experiencia en tecnologías como Java, Spring Boot y Spring Cloud, desarrollo de servicios
+                            REST y arquitectura de microservicios. También he participado en el desarrollo de interfaces
+                            web, mantenimiento de portales institucionales, optimización de accesibilidad y SEO, y
+                            soporte a usuarios.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Habilidades técnicas</h2>
+                        <div class="skills">
+                            <div class="skill-name">Backend</div>
+                            <div>Java, Spring Boot, Spring Cloud, Eureka, API Gateway, OpenFeign, JPA/Hibernate, Jakarta
+                                EE, APIs REST, JWT.</div>
+                            <div class="skill-name">Frontend</div>
+                            <div>Angular, TypeScript, JavaScript, RxJS, NgRx, PrimeNG, Vue.js, Pinia, HTML5, CSS3.</div>
+                            <div class="skill-name">Arquitectura</div>
+                            <div>Microservicios, integración de servicios REST y programación orientada a objetos.</div>
+                            <div class="skill-name">Herramientas</div>
+                            <div>Docker, Git, GitHub, Postman, VS Code, pnpm, Netlify.</div>
+                            <div class="skill-name">Bases de datos</div>
+                            <div>PostgreSQL, MySQL, SQL Server, MongoDB.</div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2 class="section-title">Experiencia profesional</h2>
+                        <article class="entry">
+                            <div class="entry-main">
+                                <div class="entry-title">Desarrollador de Software</div>
+                                <div class="organization">1cero1 Software S.A.S. · Medellín, Colombia</div>
+                                <ul>
+                                    <li>Desarrollo y mantenimiento de módulos para plataformas de consulta de documentos
+                                        públicos de entidades gubernamentales.</li>
+                                    <li>Implementación de encuestas ciudadanas con métricas y gráficas para analizar
+                                        respuestas.</li>
+                                    <li>Rediseño y mantenimiento de portales institucionales para alcaldías y
+                                        gobernaciones.</li>
+                                    <li>Optimización de sitios web con resultados de hasta <strong>100 % en
+                                            accesibilidad y SEO en Lighthouse</strong>.</li>
+                                    <li>Capacitación a funcionarios en código fuente y mantenimiento de portales con
+                                        SharePoint Designer.</li>
+                                </ul>
+                                <div class="technologies"><strong>Tecnologías:</strong> C#, JavaScript, Vue.js, Tailwind
+                                    CSS, DataTables, SharePoint, HTML5 y CSS3.</div>
+                            </div>
+                            <div class="date">Sep. 2023 – Actualidad</div>
+                        </article>
+
+                        <article class="entry">
+                            <div class="entry-main">
+                                <div class="entry-title">Desarrollador Angular</div>
+                                <div class="organization">Intecol S.A.S. · Medellín, Colombia</div>
+                                <ul>
+                                    <li>Desarrollo de funcionalidades y corrección de errores en aplicaciones
+                                        empresariales con Angular.</li>
+                                    <li>Gestión de peticiones HTTP y transformación de flujos de datos mediante
+                                        operadores RxJS.</li>
+                                    <li>Construcción de reportes gráficos para presupuestos y producción de planta.</li>
+                                </ul>
+                                <div class="technologies"><strong>Tecnologías:</strong> Angular, TypeScript, .NET RxJS y
+                                    HTTP.</div>
+                            </div>
+                            <div class="date">Jun. 2023 – Sep. 2023</div>
+                        </article>
+
+                        <article class="entry">
+                            <div class="entry-main">
+                                <div class="entry-title">Ingeniero de Prácticas – Frontend</div>
+                                <div class="organization">Intecol S.A.S. · Medellín, Colombia</div>
+                                <ul>
+                                    <li>Implementación de funcionalidades y corrección de errores en aplicaciones
+                                        empresariales.</li>
+                                    <li>Desarrollo de interfaces con Angular y PrimeNG, incluidas tablas, formularios y
+                                        componentes reutilizables.</li>
+                                    <li>Gestión de ramas y versiones con Git y Azure DevOps, trabajando bajo metodología
+                                        Scrum.</li>
+                                </ul>
+                                <div class="technologies"><strong>Tecnologías:</strong> Angular, PrimeNG, .NET, Git, y
+                                    Scrum.
+                                </div>
+                            </div>
+                            <div class="date">Dic. 2022 – Jun. 2023</div>
+                        </article>
+
+                        <article class="entry">
+                            <div class="entry-main">
+                                <div class="entry-title">Técnico de Sistemas</div>
+                                <div class="organization">Almacenes La Media Naranja · Medellín, Colombia</div>
+                                <ul>
+                                    <li>Soporte al sistema de ventas, consultas a bases de datos SQL y mantenimiento
+                                        preventivo y correctivo de equipos.</li>
+                                    <li>Capacitación a cajeros de diferentes sedes.</li>
+                                </ul>
+                                <div class="technologies"><strong>Áreas:</strong> SQL, soporte técnico y bases de datos.
+                                </div>
+                            </div>
+                            <div class="date">Feb. 2022 – Dic. 2022</div>
+                        </article>
+                    </section>
+
+                    <section class="education">
+                        <h2 class="section-title">Educación</h2>
+                        <article class="entry">
+                            <div class="entry-main">
+                                <div class="entry-title">Ingeniería de Software</div>
+                                <div class="organization">Corporación Universitaria Iberoamericana · Bogotá, Colombia ·
+                                    Sexto semestre</div>
+                            </div>
+                            <div class="date">2023 – Actualidad</div>
+                        </article>
+                        <article class="entry">
+                            <div class="entry-main">
+                                <div class="entry-title">Técnico en Desarrollo de Software</div>
+                                <div class="organization">CESDE · Medellín, Colombia</div>
+                            </div>
+                            <div class="date">2021 – 2023</div>
+                        </article>
+                    </section>
+
+                    <div class="languages">
+                        <strong>Idiomas</strong>
+                        <span>Español: nativo · Inglés: A1 (en formación)</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

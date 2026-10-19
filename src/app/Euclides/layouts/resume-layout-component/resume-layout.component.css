@@ -1,0 +1,377 @@
+/* =========================================
+   DISEÑO DE LA PÁGINA (Fondo oscuro)
+   ========================================= */
+.resume-page-wrapper {
+  min-height: 100vh;
+  background-color: #00030c;
+  /* Tu navy-400 */
+  /* Fondo de cuadrícula sutil (opcional) */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  position: relative;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Barra Superior */
+.resume-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 3, 12, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(197, 168, 128, 0.2);
+  /* golden-300 */
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #aab1bd;
+  /* slate-200 */
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #f2f0eb;
+  /* ivory-200 */
+}
+
+.print-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #c5a880;
+  /* golden-300 */
+  color: #00030c;
+  padding: 0.6rem 1.2rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s;
+  clip-path: var(--clip-path-buttons);
+}
+
+.print-btn:hover {
+  background-color: #d8bd96;
+  /* golden-200 */
+  transform: translateY(-2px);
+}
+
+/* Contenedor del CV */
+.resume-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+/* =========================================
+   ESTILOS DEL CV (Iguales, sin tocar medidas)
+   ========================================= */
+.ep-cv {
+  --navy: #252a37;
+  --ink: #343a46;
+  --body: #131925;
+  --muted: #32363d;
+  --line: #c9cdd4;
+  --gold: #7e6544;
+  --gold-dark: #6f5738;
+
+  width: 100%;
+  max-width: 210mm;
+  display: flex;
+  justify-content: center;
+  color: var(--body);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8.5pt;
+  line-height: 1.36;
+}
+
+.ep-cv *,
+.ep-cv *::before,
+.ep-cv *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ep-cv__scaler {
+  width: 210mm;
+  min-height: 297mm;
+  background: #fff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  /* Sombra bonita */
+
+  /* Escalado responsive */
+  zoom: 1;
+  transition: zoom 0.2s ease;
+}
+
+@media (max-width: 900px) {
+  .ep-cv__scaler {
+    zoom: 0.9;
+  }
+}
+
+@media (max-width: 768px) {
+  .ep-cv__scaler {
+    zoom: 0.75;
+  }
+}
+
+@media (max-width: 580px) {
+  .ep-cv__scaler {
+    zoom: 0.55;
+  }
+}
+
+@media (max-width: 430px) {
+  .ep-cv__scaler {
+    zoom: 0.42;
+  }
+}
+
+/* Hoja A4 */
+.ep-cv .resume {
+  width: 100%;
+  min-height: 297mm;
+  padding: 9mm 14mm 10mm;
+  background: #fff;
+}
+
+/* ... AQUÍ PEGAS EL RESTO DE TUS ESTILOS DEL CV ... */
+/* (Los estilos de h1, section-title, skills, entry, etc.) */
+.ep-cv a {
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.ep-cv header {
+  text-align: center;
+  margin-bottom: 4mm;
+}
+
+.ep-cv h1 {
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 20pt;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: .025em;
+  margin-bottom: 1.5mm;
+}
+
+.ep-cv .headline {
+  color: var(--gold-dark);
+  font-size: 9pt;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 1.5mm;
+}
+
+.ep-cv .contact {
+  color: var(--muted);
+  font-size: 7.8pt;
+  line-height: 1.6;
+}
+
+.ep-cv .contact a {
+  border-bottom: 1px dotted var(--line);
+}
+
+.ep-cv section {
+  margin-top: 3.5mm;
+}
+
+.ep-cv .section-title {
+  color: var(--navy);
+  font-family: Georgia, serif;
+  font-size: 10pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .045em;
+  line-height: 1.3;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 1mm;
+  margin-bottom: 2mm;
+}
+
+.ep-cv p {
+  line-height: 1.42;
+}
+
+.ep-cv .skills {
+  display: grid;
+  grid-template-columns: 28mm minmax(0, 1fr);
+  column-gap: 3mm;
+  row-gap: 1.2mm;
+  line-height: 1.38;
+}
+
+.ep-cv .skill-name {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.ep-cv .entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 31mm;
+  column-gap: 4mm;
+  margin-top: 3mm;
+  break-inside: avoid;
+}
+
+.ep-cv .entry:first-of-type {
+  margin-top: 0;
+}
+
+.ep-cv .entry-main {
+  min-width: 0;
+}
+
+.ep-cv .entry-title {
+  color: var(--navy);
+  font-size: 9.5pt;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.ep-cv .organization {
+  color: var(--muted);
+  font-size: 8pt;
+  font-style: italic;
+  line-height: 1.4;
+  margin-top: .5mm;
+  margin-bottom: 1mm;
+}
+
+.ep-cv .date {
+  color: var(--muted);
+  text-align: right;
+  font-size: 7.7pt;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.4;
+  padding-top: .2mm;
+}
+
+.ep-cv ul {
+  padding-left: 4mm;
+  margin-top: .8mm;
+}
+
+.ep-cv li {
+  padding-left: .4mm;
+  margin-bottom: .9mm;
+  line-height: 1.34;
+}
+
+.ep-cv li::marker {
+  color: var(--gold);
+}
+
+.ep-cv .technologies {
+  margin-top: 1mm;
+  font-size: 7.7pt;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.ep-cv .technologies strong {
+  color: var(--gold-dark);
+}
+
+.ep-cv .education .entry {
+  margin-top: 2.5mm;
+}
+
+.ep-cv .education .organization {
+  margin-bottom: 0;
+}
+
+.ep-cv .languages {
+  display: flex;
+  gap: 3mm;
+  margin-top: 3.5mm;
+  padding-top: 2mm;
+  border-top: 1px solid var(--line);
+  font-size: 8pt;
+  line-height: 1.4;
+}
+
+.ep-cv .languages strong {
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+/* =========================================
+   MAGIA PARA IMPRIMIR (Solo el CV)
+   ========================================= */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+
+  /* Ocultar el fondo, la barra de herramientas y los paddings */
+  body,
+  html {
+    background: #fff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .resume-toolbar {
+    display: none !important;
+    /* Adiós botón y menú */
+  }
+
+  .resume-page-wrapper {
+    background: #fff !important;
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+
+  .resume-content {
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  /* Resetear el CV a tamaño real A4 */
+  .ep-cv {
+    max-width: none !important;
+    width: 210mm !important;
+  }
+
+  .ep-cv__scaler {
+    zoom: 1 !important;
+    /* Forzar tamaño 100% */
+    width: 210mm !important;
+    min-height: 297mm !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+
+  .ep-cv .entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}

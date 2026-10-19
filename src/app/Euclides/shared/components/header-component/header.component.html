@@ -1,20 +1,28 @@
-<header class="ep-header fixed w-full top-0 left-0 right-0 py-1 z-101 bg-brand-navy-300/70 backdrop-blur-xl border-b border-brand-golden-200/10 shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
-  <nav
-    class="ep-header__nav px-4 xl:px-0 w-full max-w-6xl mx-auto h-14 flex items-center justify-between py-2">
+<header
+  class="ep-header fixed w-full top-0 left-0 right-0 py-1 z-101 bg-brand-navy-300/70 backdrop-blur-xl border-b border-brand-golden-200/10 shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+  <nav class="ep-header__nav px-4 xl:px-0 w-full max-w-6xl mx-auto h-14 flex items-center justify-between py-2">
 
     <a [routerLink]="'/euclides/about'"
-      class="group relative flex items-center justify-center gap-2 py-4 text-brand-ivory-300 font-medium text-[12px] sm:text-sm text-nowrap transition-colors duration-300"
-    >
+      class="group relative flex items-center justify-center gap-2 py-4 text-brand-ivory-300 font-medium text-[12px] sm:text-sm text-nowrap transition-colors duration-300">
       <div class="relative overflow-hidden border border-brand-steel-300/80 w-10.5 h-10.5 p-1 text-brand-golden-100">
-        <div class="transition-colors duration-500 absolute top-0 left-0 z-10 h-2 w-2 border-0 border-t border-l border-transparent group-hover:border-brand-ivory-300"></div>
-        <div class="transition-colors duration-500 absolute right-0 bottom-0 z-10 h-2 w-2 border-0 border-r border-b border-transparent group-hover:border-brand-ivory-300"></div>
+        <div
+          class="transition-colors duration-500 absolute top-0 left-0 z-10 h-2 w-2 border-0 border-t border-l border-transparent group-hover:border-brand-ivory-300">
+        </div>
+        <div
+          class="transition-colors duration-500 absolute right-0 bottom-0 z-10 h-2 w-2 border-0 border-r border-b border-transparent group-hover:border-brand-ivory-300">
+        </div>
         <span class="absolute top-1 left-2 text-[12px] font-semibold">E</span>
-        <span class="absolute bottom-0.5 right-2 text-[12px] font-semibold">P</span>  
-        <span class="absolute top-2 right-4 h-1 w-1 bg-brand-navy-200  group-hover:bg-brand-steel-200 transition-colors duration-100"></span>
-        <span class="absolute top-2 right-2 h-1 w-1 bg-brand-golden-300/50 group-hover:bg-brand-golden-200 transition-colors duration-500"></span>
-        <span class="absolute top-4 right-2 h-1 w-1 bg-brand-ivory-300/50 group-hover:bg-brand-ivory-300 transition-colors duration-900"></span>
-        <span class="absolute transform -translate-x-5 bottom-1.5 left-2 h-1 w-2.5 border-t border-brand-ivory-300/0 group-hover:border-brand-golden-100 group-hover:translate-x-0 transition-all duration-500"></span>
-        <span class="absolute transform -translate-x-4 bottom-0.5 left-2 h-1 w-2 border-t border-brand-ivory-300/0 group-hover:border-brand-golden-100 group-hover:translate-x-0 transition-all duration-900"></span>
+        <span class="absolute bottom-0.5 right-2 text-[12px] font-semibold">P</span>
+        <span
+          class="absolute top-2 right-4 h-1 w-1 bg-brand-navy-200  group-hover:bg-brand-steel-200 transition-colors duration-100"></span>
+        <span
+          class="absolute top-2 right-2 h-1 w-1 bg-brand-golden-300/50 group-hover:bg-brand-golden-200 transition-colors duration-500"></span>
+        <span
+          class="absolute top-4 right-2 h-1 w-1 bg-brand-ivory-300/50 group-hover:bg-brand-ivory-300 transition-colors duration-900"></span>
+        <span
+          class="absolute transform -translate-x-5 bottom-1.5 left-2 h-1 w-2.5 border-t border-brand-ivory-300/0 group-hover:border-brand-golden-100 group-hover:translate-x-0 transition-all duration-500"></span>
+        <span
+          class="absolute transform -translate-x-4 bottom-0.5 left-2 h-1 w-2 border-t border-brand-ivory-300/0 group-hover:border-brand-golden-100 group-hover:translate-x-0 transition-all duration-900"></span>
       </div>
 
       <span class="text-brand-golden-300">{{ 'Euclides' | uppercase }}</span>
@@ -22,8 +30,7 @@
 
     <div class="hidden lg:flex">
       @for (route of routes(); track route.path) {
-      <a [routerLink]="route.path" routerLinkActive="ep-nav__item-active"
-        [routerLinkActiveOptions]="{ exact: true }"
+      <a [routerLink]="route.path" routerLinkActive="ep-nav__item-active" [routerLinkActiveOptions]="{ exact: true }"
         class="ep-nav__item relative  px-3 py-1 text-[11px] font-medium uppercase tracking-[0.12em] transition-all hover:text-brand-golden-200">
         <span>{{ route.label | uppercase }}</span>
       </a>
@@ -31,7 +38,7 @@
     </div>
 
     <div class="flex items-center justify-center gap-4">
-      <a routerLink="/cv"
+      <a routerLink="/resumen"
         class="text-brand-golden-300 bg-brand-navy-200 border backdrop-blur-2xl border-brand-golden-300/10 hover:bg-brand-golden-100/20 tracking-widest transition-colors duration-500 text-[9px] sm:text-[12px] flex items-center p-2 sm:p-3 rounded-lg font-bold justify-center gap-1">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4  h-4" viewBox="0 0 1024 1024">
           <path d="M0 0h1024v1024H0z" fill="none" />

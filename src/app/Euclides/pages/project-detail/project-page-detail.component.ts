@@ -6,11 +6,11 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-project-detail',
   imports: [],
-  templateUrl: './project-detail.component.html',
-  styleUrl: './project-detail.component.css'
+  templateUrl: './project-page-detail.component.html',
+  styleUrl: './project-page-detail.component.css'
 })
 
-export default class ProjectDetailComponent implements OnInit {
+export default class ProjectPageDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProjectbySlug(this.projectTitle)

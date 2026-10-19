@@ -1,3 +1,4 @@
+import { ResumeLayoutComponent } from './Euclides/layouts/resume-layout-component/resume-layout.component';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -40,10 +41,15 @@ export const routes: Routes = [
             },
             {
                 path: 'projects/:title',
-                loadComponent: () => import('./Euclides/pages/project-detail/project-detail.component')
-            }
+                loadComponent: () => import('./Euclides/pages/project-detail/project-page-detail.component')
+            },
         ],
     },
+    {
+        path: 'resumen',
+        loadComponent: () => import('./Euclides/layouts/resume-layout-component/resume-layout.component').then(m => m.ResumeLayoutComponent)
+    },
+
     {
         path: '**',
         redirectTo: 'euclides',
