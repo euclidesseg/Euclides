@@ -81,6 +81,11 @@ export const skills: Skill[] = [
     icon: 'file-icons:pnpm'
   },
   {
+    name: 'docker',
+    category: 'Tools',
+    icon: 'file-icons:docker'
+  },
+  {
     name: 'OpenCode',
     category: 'Agents',
     icon: 'simple-icons:opencode'
