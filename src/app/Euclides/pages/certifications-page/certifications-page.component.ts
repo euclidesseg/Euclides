@@ -31,7 +31,7 @@ export default class CertificationsPageComponent {
       slug: 'software-engineer-iberoamericana',
       title: 'Ingeniería de Software',
       institution: 'C.U Iberoamericana',
-      description: 'Me encuentro en fase final de la carrera como ingeniero de software, en ella he podido aprender habilidades técnicas y de resolución de problemas',
+      description: 'Me encuentro en fase final de la carrera como ingeniero de software, en ella he podido aprender habilidades técnicas y de resolución de problemas, entre ellas: Arquitectura, Matemáticas, Probabilidad, Estadística ',
 
 
       startDate: 'Junio 2023',
@@ -41,7 +41,9 @@ export default class CertificationsPageComponent {
         'Matemáticas',
         'Ecuaciones',
         'Inglés',
-        'Metodologías'
+        'Estadisticas',
+        'Arquitectura',
+        'Gestion de proyectos'
       ],
 
       year: 2023
